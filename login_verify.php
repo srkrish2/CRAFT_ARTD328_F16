@@ -20,7 +20,7 @@ $isOkay=1;
 
 if ($stmt = mysqli_prepare($conn, "SELECT * From u_Designer WHERE email = ?")) {
   
-  mysqli_stmt_bind_param($stmt, "s", $email);
+  mysqli_stmt_bind_param($stmt, "s", $EMAIL);
   $email=test_input($EMAIL);
   mysqli_stmt_execute($stmt);
   $result = $stmt->get_result();
