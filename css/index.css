@@ -1,0 +1,106 @@
+* {
+	margin: 0;
+}
+html, body {
+	height: 100%;
+}
+
+label{
+	font-size: 12pt;
+	padding-top: 10px;
+}
+
+.label2{
+	font-size: 18pt;
+}
+
+footer
+{
+	text-align: center;
+	color: #666;
+	font-family: Sylfaen, Georgia, sans-serif;
+	border-top: 1px dashed #CCC;
+	padding: 10px;
+	width: 80%;
+	margin: 0 auto;
+}
+
+
+.main-section {
+	min-height: 100%;
+	height: auto !important; /* This line and the next line are not necessary unless you need IE6 support */
+	height: 100%;
+	padding-top: 60px;
+	padding-bottom: 100px;
+
+}
+/*Typography*/
+.heading-font{	
+	font-family: 'Architects Daughter', cursive;
+}
+
+.content-font{
+	font-family: 'Righteous', cursive;
+}
+
+/*designer home */
+#img-preview{
+	width:auto;
+	height:200px;
+}
+
+.preview-block{
+
+	background-image: url("../web_img/paper_bg3.jpg");
+	border-radius: 5px;
+	border: 1px solid #D8D8D8;
+}
+
+/*Not use now */
+ul.gallery { 
+	list-style: none;
+}
+ul.gallery li div {
+	position: relative;
+	float: left;
+	padding: 10px 10px 25px 10px;
+	background: #eee;
+	border: 1px solid #fff;
+	-moz-box-shadow: 0px 2px 15px #333;
+}
+	
+	ul.gallery li div.pic-1 {
+		z-index: 1;
+		-webkit-transform: rotate(-10deg);
+ 		-moz-transform: rotate(-10deg);
+	}
+	ul.gallery li div.pic-2 {
+		z-index: 5;
+		-webkit-transform: rotate(-3deg);
+ 		-moz-transform: rotate(-3deg);
+	}
+	ul.gallery li div.pic-3 {
+		z-index: 3;
+		-webkit-transform: rotate(4deg);
+ 		-moz-transform: rotate(4deg);
+	}
+	ul.gallery li div.pic-4 {
+		z-index: 4;
+		-webkit-transform: rotate(14deg);
+ 		-moz-transform: rotate(14deg);
+	}
+	ul.gallery li div.pic-5 {
+		z-index: 2;
+		-webkit-transform: rotate(-12deg);
+ 		-moz-transform: rotate(-12deg);
+	}
+	ul.gallery li div.pic-6 {
+		z-index: 6;
+		-webkit-transform: rotate(5deg);
+ 		-moz-transform: rotate(5deg);
+	}
+	
+	ul.gallery li div:hover {
+		z-index: 10;
+		-moz-box-shadow: 3px 5px 15px #333;
+	}

@@ -1,0 +1,16 @@
+.question-list
+{
+	margin-left: 50px;
+	margin-right: 50px;
+}
+
+.question-list > li
+{
+	margin-bottom: 20px;
+}
+
+.question-list ul li
+{
+	width: 200px;
+	margin-right: 20px;
+}
