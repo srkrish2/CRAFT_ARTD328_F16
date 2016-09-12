@@ -17,9 +17,10 @@ function test_input($data) {
 }
 
 $isOkay=1;
+error_log("here",0);
 
 if ($stmt = mysqli_prepare($conn, "SELECT * From u_Designer WHERE email = ?")) {
-  error_log("prepared");
+  error_log("prepared",0);
   mysqli_stmt_bind_param($stmt, "s", $EMAIL);
   $email=test_input($EMAIL);
   mysqli_stmt_execute($stmt);
@@ -27,10 +28,10 @@ if ($stmt = mysqli_prepare($conn, "SELECT * From u_Designer WHERE email = ?")) {
   $designer = $result->fetch_assoc();  
   }
   else{
-    error_log("not connected");
+    error_log("not connected",0);
   }
 
-  error_log($designer);
+  error_log($designer, 0);
  
 
   if(!$designer)
