@@ -79,18 +79,18 @@
             
         </div>
       
-  </nav>
-<script>
-  $(document).ready(function(){
-    $('#logout').click(function(){
-        alert("logging out");
-        $.post('logout.php', function (response) {
-            window.location.href='../index.php';
+    </nav>
+    <script>
+      $(document).ready(function(){
+        $('#logout').click(function(){
+            alert("logging out");
+            $.post('logout.php', function (response) {
+                window.location.href='../index.php';
+            });
         });
-    });
 
-});
-</script>
+    });
+    </script>
 
 
 

@@ -23,6 +23,7 @@ body {
   font-size: 18px;
   padding: 5px 10px 5px 10px;
   text-decoration: none;
+  padding-top: 40px;
 }
 
 .btn-add:hover {
