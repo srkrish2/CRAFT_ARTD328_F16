@@ -41,7 +41,7 @@ $isOkay=true;
 			echo "Sorry, there was an error in the database";
 		}
 		else{
-			$design_id = mysqli_insert_id();
+			$design_id = mysqli_insert_id($conn);
 		}
 		mysqli_stmt_close($stmt); 
 	}
