@@ -50,12 +50,12 @@
   <div class="main-section">
       <div class="container" >
 
-        <form class="form-signin" width="100px">
+        <form class="form-signin" >
           <h2 class="form-signin-heading">Please sign in</h2>
           <label for="inputEmail" class="sr-only">Email address</label>
-          <input type="email" name="inputEmail" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+          <input type="email" width="25%" name="inputEmail" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
           <label for="inputPassword" class="sr-only">Password</label>
-          <input type="password" name="inputPassword" id="inputPassword" class="form-control" placeholder="Password" required>
+          <input type="password" width="25%" name="inputPassword" id="inputPassword" class="form-control" placeholder="Password" required>
           <div class="checkbox">
            
           </div>
