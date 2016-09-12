@@ -2,6 +2,26 @@ em{
   color:red;
 }
 
+.main-section {
+  min-height: 100%;
+  height: auto !important; /* This line and the next line are not necessary unless you need IE6 support */
+  height: 100%;
+  padding-top: 60px;
+  padding-bottom: 100px;
+
+}
+
+footer
+{
+  text-align: center;
+  color: #666;
+  font-family: Sylfaen, Georgia, sans-serif;
+  border-top: 1px dashed #CCC;
+  padding: 10px;
+  width: 80%;
+  margin: 0 auto;
+}
+
 .btn-add {
   background: #097509;
   background-image: -webkit-linear-gradient(top, #097509, #08401b);
