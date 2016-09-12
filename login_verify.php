@@ -19,7 +19,7 @@ function test_input($data) {
 $isOkay=1;
 
 if ($stmt = mysqli_prepare($conn, "SELECT * From u_Designer WHERE email = ?")) {
-  
+  error_log("prepared");
   mysqli_stmt_bind_param($stmt, "s", $EMAIL);
   $email=test_input($EMAIL);
   mysqli_stmt_execute($stmt);
@@ -29,6 +29,8 @@ if ($stmt = mysqli_prepare($conn, "SELECT * From u_Designer WHERE email = ?")) {
   else{
     error_log("not connected");
   }
+
+  error_log($designer);
  
 
   if(!$designer)
