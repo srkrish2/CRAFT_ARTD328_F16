@@ -49,6 +49,10 @@
   
   <div class="main-section">
       <div class="container" >
+         <div class="row">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4">
+
 
         <form class="form-signin" >
           <h2 class="form-signin-heading">Please sign in</h2>
@@ -63,6 +67,10 @@
           
          
         </form>
+        </div>
+
+            <div class="col-sm-4"></div>
+  </div>
         
         <div class="row" style="text-align:center; padding-bottom:20px">
          <button type="button" class="btn btn-large btn-primary" onclick="submit()">Sign in</button>
