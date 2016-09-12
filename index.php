@@ -108,12 +108,6 @@ function submit(){
                     case "success":
                       window.location.href = "designer/homepage.php";
                       break;
-                    case "finished":
-                      $("#result").text("You have completed the study. Thank you.");
-                      break;
-                    case "remove":
-                      window.location.href = "sign-up-close.php";
-                      break;
                     default:
                        $("#result").text("Log in failed. Please contact the administrator at design4uiuc@gmail.com .");
                       break;

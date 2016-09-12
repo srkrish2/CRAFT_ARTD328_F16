@@ -46,7 +46,7 @@ if ($stmt = mysqli_prepare($conn, "SELECT * From u_Designer WHERE email = ?")) {
       echo "pwd_incorrect";
       die();
     }
-    
+
   }
 
 }
@@ -57,12 +57,8 @@ if($isOkay==1){
   $_SESSION['password']=$designer['password'];
   $_SESSION['designer_id']=$designer['DesignerID'];
   echo "success";
-
+  die();
 }
-
-
-
-  
 
    mysqli_close($conn);
    //header('Location:'.$HOME_PAGE);
