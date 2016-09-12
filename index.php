@@ -83,14 +83,13 @@ $( "#inputPassword" ).keydown(function() {
 });
 
 function submit(){
-     
-      alert("in alert");
             $.ajax({
                 type: "POST",
                 url: "login_verify.php",
                 data: { inputEmail:$.trim($("input#inputEmail").val()),inputPassword:$.trim($("input#inputPassword").val())},
                 success: function(data){
                   alert("here");
+                  alert(data);
                   switch(data)
                   {
                     case "email_not_exit":
