@@ -64,13 +64,14 @@
   </head>
 
   <body>
+
+    <!--Where designs are shown-->
+    <div class="main-section">
+      
     <!-- Nav Bar-->
     <?php include('../webpage-utility/ele_nav.php');?>
     <!-- End Nav Bar-->
 
-
-    <!--Where designs are shown-->
-    <div class="main-section">
       <!-- Button trigger modal -->
         <div class="container">
         <div>
