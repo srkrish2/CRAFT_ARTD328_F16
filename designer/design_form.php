@@ -3,7 +3,7 @@
 	$designer_id=$_SESSION['designer_id'];
 
 
-	if(!$designer_id) { header("Location: ../index.php?role=1"); die(); }
+	if(!$designer_id) { header("Location: ../index.php"); die(); }
 
 	if(is_null($_GET['design_id']) )
 		{ header("Location: homepage.php"); die();}
@@ -21,16 +21,16 @@
 <html lang="en">
   <head>
    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    <?php include($_SERVER['DOCUMENT_ROOT'].'/mentoring/webpage-utility/ele_header.php');?>
+    <?php include('../webpage-utility/ele_header.php');?>
    <title>Signin Page </title>
     <!-- Custom styles for this template -->
-    <link href="/mentoring/css/designer.css" rel="stylesheet">
+    <link href="../css/designer.css" rel="stylesheet">
 
   </head>
 
   <body>
     <!-- Nav Bar-->
-     <?php include($_SERVER['DOCUMENT_ROOT'].'/mentoring/webpage-utility/ele_nav.php');?>
+     <?php include('../webpage-utility/ele_nav.php');?>
     <!-- End Nav Bar-->
 
     <div class="main-section">
