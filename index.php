@@ -41,7 +41,9 @@
       
   </nav>
   <!-- End Nav Bar-->
-
+<div class="navbar-header" hidden='true'>
+                <a class="navbar-brand" style="color:#E87722" href="/mentoring/index.php">CRAFT</a>
+            </div>
   
 
       
