@@ -1,4 +1,6 @@
 <?php
+
+error_log("here",0);
     
 session_start();
 
