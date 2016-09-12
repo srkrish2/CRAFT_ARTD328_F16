@@ -59,21 +59,19 @@
    <title>Signin Page </title>
     <!-- Custom styles for this template -->
     <link href="../css/designer.css" rel="stylesheet">
-    <link href="./css/signin.css" rel="stylesheet">
-
   </head>
 
   <body>
 
     <!--Where designs are shown-->
     <div class="main-section">
-      
+      <div class="container">
     <!-- Nav Bar-->
     <?php include('../webpage-utility/ele_nav.php');?>
     <!-- End Nav Bar-->
 
       <!-- Button trigger modal -->
-        <div class="container">
+        
         <div>
           <a type="button" class="btn-add" href="design_form.php?design_id=0"> &nbsp&nbsp Add Design &nbsp&nbsp </a> 
         </div>
