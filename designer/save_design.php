@@ -4,7 +4,7 @@
  $designer_id=$_SESSION['designer_id'];
  $team_id=$_SESSION['team_id'];
 
-if(!$designer_id) { header("Location: ../login.php"); die(); }
+if(!$designer_id) { header("Location: ../index.php"); die(); }
 if(is_null($_GET['design_id']))
 	{ header("Location: homepage.php"); die();}
 
@@ -22,7 +22,7 @@ function generateRandomString($length = 10) {
     return $randomString;
 }
 
-include_once($_SERVER['DOCUMENT_ROOT'].'/mentoring/webpage-utility/db_utility.php');
+include_once('../webpage-utility/db_utility.php');
 $conn = connect_to_db();
 	
 $isOkay=true;
