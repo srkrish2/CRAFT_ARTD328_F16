@@ -39,51 +39,14 @@ if ($stmt = mysqli_prepare($conn, "SELECT * From u_Designer WHERE email = ?")) {
   }
   else
   { 
-    if($designer['password'] != test_input($PWD) ){
+    if($designer['pass'] != test_input($PWD) ){
       $isOkay=0;
       mysqli_close($conn);
       //header('Location:error.php?error=pwd_incorrect');
       echo "pwd_incorrect";
       die();
     }
-    else
-    {
-        //Check Group
-        if($designer['DesignerID']<190)
-        {
-         
-                $isOkay=0;
-                mysqli_close($conn);
-                //header('Location:error.php?error=pwd_incorrect');
-                echo "remove";
-                 die();
-        }
-
-        if($designer['process'] == 6 ){
-        $isOkay=0;
-        mysqli_close($conn);
-        //header('Location:error.php?error=pwd_incorrect');
-        echo "finished";
-        die();
-        
-        }
-       
-       /* else{
-
-            if($designer['process'] <3 ){
-            $isOkay=0;
-            mysqli_close($conn);
-            //header('Location:error.php?error=pwd_incorrect');
-            echo "remove";
-            die();
-            }
-      }*/
-
-
-    } 
-
-
-
+    
   }
 
 }
