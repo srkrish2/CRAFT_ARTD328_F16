@@ -67,7 +67,7 @@
     <div class="main-section">
       <div class="container">
     <!-- Nav Bar-->
-    <?php include('../webpage-utility/ele_nav.php');?>
+    <!--<?php //include('../webpage-utility/ele_nav.php');?> -->
     <!-- End Nav Bar-->
       <nav class="navbar navbar-fixed-top navbar-inverse" style="background:#002058">
         <div class="container">
