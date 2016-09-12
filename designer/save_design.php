@@ -83,17 +83,9 @@ $isOkay=true;
 
 //echo "HERE!!!!!!";
 mysqli_close($conn);//""
-//echo "<html><img width='auto' height='300px' src='../design/".$newFilePath."'></html>"; 
-if($_POST['action']=="sent-to-view"){
-	//echo "preview";
-	header( "Location: preview.php?design_id=".$design_id );
-	die();
-}
-else
-{
+
 	//echo "save";
 	header( "Location: designer_home.php");
-	die();
-}				 ;
+	die();			 ;
 
 ?>
