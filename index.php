@@ -84,7 +84,7 @@ $( "#inputPassword" ).keydown(function() {
 
 function submit(){
      
-      
+      alert("in alert");
             $.ajax({
                 type: "POST",
                 url: "login_verify.php",
