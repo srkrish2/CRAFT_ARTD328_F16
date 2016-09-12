@@ -25,7 +25,10 @@ if ($stmt = mysqli_prepare($conn, "SELECT * From u_Designer WHERE email = ?")) {
   mysqli_stmt_execute($stmt);
   $result = $stmt->get_result();
   $designer = $result->fetch_assoc();  
-  
+  }
+  else{
+    error_log("not connected");
+  }
  
 
   if(!$designer)
@@ -48,8 +51,6 @@ if ($stmt = mysqli_prepare($conn, "SELECT * From u_Designer WHERE email = ?")) {
     }
 
   }
-
-}
 
 
 if($isOkay==1){
