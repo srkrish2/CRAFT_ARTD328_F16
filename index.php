@@ -17,11 +17,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-<!-- Latest compiled JavaScript -->
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <?php include('./webpage-utility/ele_header.php');?>
    <title>Signin Page </title>
