@@ -31,8 +31,6 @@ if ($stmt = mysqli_prepare($conn, "SELECT * From u_Designer WHERE email = ?")) {
   else{
     error_log("not connected",0);
   }
-
-  error_log($designer, 0);
  
 
   if(!$designer)
