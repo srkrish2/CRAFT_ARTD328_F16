@@ -42,7 +42,9 @@
   </nav>
   <!-- End Nav Bar-->
 
-  
+  <div class="navbar-header">
+                <a class="navbar-brand" style="color:#E87722" href="~/public_html/CRAFT_ARTD328_F16/index.php">CRAFT</a>
+            </div>
 
       
          <div class="row">
