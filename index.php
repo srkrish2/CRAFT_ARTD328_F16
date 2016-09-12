@@ -1,4 +1,5 @@
 <?php
+session_save_path("~/public_html/CRAFT_ARTD328_F16/tmp");
     session_start();
     $_SESSION["experimentID"]=3;
     $_SESSION["role"]=1; //Designer login
