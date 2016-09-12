@@ -71,7 +71,7 @@
     <!-- End Nav Bar-->
 
       <!-- Button trigger modal -->
-        
+        <div class='row'>
         <div>
           <a type="button" class="btn-add" href="design_form.php?design_id=0"> &nbsp&nbsp Add Design &nbsp&nbsp </a> 
         </div>
@@ -124,7 +124,7 @@
         }
         mysqli_close($conn);
       ?>
-
+</div>
       </div>
 
     </div>
