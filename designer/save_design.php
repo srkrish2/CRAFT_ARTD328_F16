@@ -36,7 +36,7 @@ $isOkay=true;
 	$sql="INSERT INTO Designs (`teamID`, `description`, `stage`, `title`, `mid`) VALUES (?, ?, ?, ?, ?)";
 	if($stmt=mysqli_prepare($conn,$sql))
 	{
-		mysqli_stmt_bind_param($stmt,"isiss",$team_id,$_description,$_stage),$_title,$generated_mid);
+		mysqli_stmt_bind_param($stmt,"isiss",$team_id,$_description,$_stage,$_title,$generated_mid);
 		if(!mysqli_stmt_execute($stmt)){
 			echo "Sorry, there was an error in the database";
 		}
