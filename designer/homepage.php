@@ -69,9 +69,16 @@
     <!-- Nav Bar-->
     <?php include('../webpage-utility/ele_nav.php');?>
     <!-- End Nav Bar-->
+      <nav class="navbar navbar-fixed-top navbar-inverse" style="background:#002058">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" style="color:#FFFFFF" href="~/public_html/CRAFT_ARTD328_F16/index.php">CRAFT</a>
+            </div>
+         
+        </div>
+
 
       <!-- Button trigger modal -->
-        <div class='row'>
         <div>
           <a type="button" class="btn-add" href="design_form.php?design_id=0"> &nbsp&nbsp Add Design &nbsp&nbsp </a> 
         </div>
@@ -124,7 +131,7 @@
         }
         mysqli_close($conn);
       ?>
-</div>
+
       </div>
 
     </div>
