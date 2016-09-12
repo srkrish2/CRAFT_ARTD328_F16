@@ -35,6 +35,7 @@
 
   <body>
 <!-- Nav Bar-->
+  <div class="main-section">
 <nav class="navbar navbar-fixed-top navbar-inverse" style="background:#002058">
         <div class="container">
             <div class="navbar-header">
@@ -47,7 +48,7 @@
   <!-- End Nav Bar-->
 
   
-  <div class="main-section">
+
       <div class="container" >
          <div class="row">
     <div class="col-sm-4"></div>
