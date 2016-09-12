@@ -85,7 +85,7 @@ $isOkay=true;
 mysqli_close($conn);//""
 
 	//echo "save";
-	header( "Location: designer_home.php");
+	header( "Location: homepage.php");
 	die();			 ;
 
 ?>
