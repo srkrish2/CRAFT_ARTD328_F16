@@ -48,7 +48,7 @@
 
   
   <div class="main-section">
-      <div class="container">
+      <div class="container" width="25%">
 
         <form class="form-signin">
           <h2 class="form-signin-heading">Please sign in</h2>
