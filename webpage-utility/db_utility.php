@@ -1,7 +1,7 @@
 <?php
 
 function connect_to_db(){
-   require_once($_SERVER['DOCUMENT_ROOT'].'/mentoring/webpage-utility/db_config.php');
+   require_once('db_config.php');
    // Create connection
    $connection = mysqli_connect($DB_HOST,$SQL_ACC,$SQL_PWD,$DB);
 
