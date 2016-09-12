@@ -104,7 +104,7 @@ function submit(){
                     default:
                        $("#result").text("Log in failed. Please contact the administrator at design4uiuc@gmail.com .");
                       break;
-                  }
+                  },
                   error:function(exception){
                     $("#result").text('Exeption:'+exception));
                   }
