@@ -24,7 +24,6 @@ error_log("here",0);
 if ($stmt = mysqli_prepare($conn, "SELECT * From u_Designer WHERE email = ?")) {
   error_log("prepared",0);
   mysqli_stmt_bind_param($stmt, "s", $EMAIL);
-  $email=test_input($EMAIL);
   mysqli_stmt_execute($stmt);
   $result = $stmt->get_result();
   $designer = $result->fetch_assoc();  

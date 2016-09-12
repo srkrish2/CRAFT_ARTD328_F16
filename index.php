@@ -90,6 +90,7 @@ function submit(){
                 url: "login_verify.php",
                 data: { inputEmail:$.trim($("input#inputEmail").val()),inputPassword:$.trim($("input#inputPassword").val())},
                 success: function(data){
+                  alert("here");
                   switch(data)
                   {
                     case "email_not_exit":
@@ -106,6 +107,7 @@ function submit(){
                       break;
                   },
                   error:function(exception){
+                    alert("here2");
                     $("#result").text('Exeption:'+exception));
                   }
                    
