@@ -28,34 +28,26 @@ ini_set('session.save_path', '/home/crowdsight/public_html/CRAFT_ARTD328_F16/tmp
   </head>
 
   <body>
-<!-- Nav Bar-->
-  <div class="main-section">
-    <div class="container" >
-<nav class="navbar navbar-fixed-top navbar-inverse" style="background:#002058">
+      <!-- Nav Bar-->
+  <nav class="navbar navbar-fixed-top navbar-inverse">
         <div class="container">
             <div class="navbar-header">
-                <a class="navbar-brand" style="color:#E87722" href="/mentoring/index.php">CRAFT</a>
+                <a class="navbar-brand" href="index.php">CRAFT</a>
             </div>
-         
         </div>
-      
   </nav>
+
+
   <!-- End Nav Bar-->
+  <div class="main-section">
+      <div class="container">
 
-  
-
-      
-         <div class="row">
-    <div class="col-sm-4"></div>
-    <div class="col-sm-4">
-
-
-        <form class="form-signin" >
+        <form class="form-signin">
           <h2 class="form-signin-heading">Please sign in</h2>
           <label for="inputEmail" class="sr-only">Email address</label>
-          <input type="email" width="100px" name="inputEmail" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+          <input type="email" name="inputEmail" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
           <label for="inputPassword" class="sr-only">Password</label>
-          <input type="password" width="100px" name="inputPassword" id="inputPassword" class="form-control" placeholder="Password" required>
+          <input type="password" name="inputPassword" id="inputPassword" class="form-control" placeholder="Password" required>
           <div class="checkbox">
            
           </div>
@@ -63,14 +55,9 @@ ini_set('session.save_path', '/home/crowdsight/public_html/CRAFT_ARTD328_F16/tmp
           
          
         </form>
-        </div>
-
-            <div class="col-sm-4"></div>
-  </div>
         
         <div class="row" style="text-align:center; padding-bottom:20px">
          <button type="button" class="btn btn-large btn-primary" onclick="submit()">Sign in</button>
-         <!--<button type="button" class="btn btn-large btn-success" onclick="window.location.href='./sign-up.php'">Register</button>-->
        </div>
          <?php include("webpage-utility/footer.php") ?>
       </div> <!-- /container -->
