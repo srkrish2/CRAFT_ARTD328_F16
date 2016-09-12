@@ -64,7 +64,7 @@ $isOkay=true;
 			}
 
 		    if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $newFilePath)) {
-		    	//echo "save image";
+		    	echo $newFilePath;
 		    	$sql="UPDATE Designs SET file=? WHERE DesignID = ? ";
 				if($stmt=mysqli_prepare($conn,$sql))
 				{
