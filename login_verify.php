@@ -8,7 +8,7 @@ $EMAIL = $_POST['inputEmail'];
 $PWD = $_POST['inputPassword'];
 $TYPE=$_SESSION['role'];
 
-include_once('./webpage-utility/db_utility.php');
+include_once('webpage-utility/db_utility.php');
 $conn = connect_to_db();
 
 function test_input($data) {
