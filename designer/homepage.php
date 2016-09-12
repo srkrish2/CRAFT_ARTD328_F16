@@ -58,13 +58,13 @@
     <?php include('../webpage-utility/ele_header.php');?>
    <title>Signin Page </title>
     <!-- Custom styles for this template -->
-    <link href="/mentoring/css/designer.css" rel="stylesheet">
+    <link href="../css/designer.css" rel="stylesheet">
 
   </head>
 
   <body>
     <!-- Nav Bar-->
-    <?php include($'../webpage-utility/ele_nav.php');?>
+    <?php include('../webpage-utility/ele_nav.php');?>
     <!-- End Nav Bar-->
 
 
