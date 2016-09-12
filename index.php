@@ -34,16 +34,14 @@
 <nav class="navbar navbar-fixed-top navbar-inverse" style="background:#002058">
         <div class="container">
             <div class="navbar-header">
-                <a class="navbar-brand" style="color:#E87722" href="/mentoring/index.php">CRAFT</a>
+                <a class="navbar-brand" style="color:#E87722" href="~/public_html/CRAFT_ARTD328_F16/index.php">CRAFT</a>
             </div>
          
         </div>
       
   </nav>
   <!-- End Nav Bar-->
-<div class="navbar-header" hidden='true'>
-                <a class="navbar-brand" style="color:#E87722" href="/mentoring/index.php">CRAFT</a>
-            </div>
+
   
 
       
