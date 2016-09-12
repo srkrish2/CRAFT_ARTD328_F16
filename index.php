@@ -105,11 +105,12 @@ function submit(){
                     default:
                        $("#result").text("Log in failed. Please contact the administrator at design4uiuc@gmail.com .");
                       break;
-                  },
-                  error:function(exception){
-                    alert("here2");
-                    $("#result").text('Exeption:'+exception));
-                  }
+                    }
+                  // },
+                  // error:function(exception){
+                  //   alert("here2");
+                  //   $("#result").text('Exeption:'+exception));
+                  // }
                    
                 }
             });
