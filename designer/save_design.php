@@ -63,7 +63,7 @@ $isOkay=true;
 			    unlink($newFilePath); //remove the file
 			}
 
-		    if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $newFilePath)) {
+		    if (move_uploaded_file($_FILES["fileToUpload"]["name"], $newFilePath)) {
 		    	echo $newFilePath;
 		    	$sql="UPDATE Designs SET file=? WHERE DesignID = ? ";
 				if($stmt=mysqli_prepare($conn,$sql))
