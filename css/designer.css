@@ -3,7 +3,7 @@ em{
 }
 
 body {
-  padding-top: 40px;
+  padding-top: 100px;
   padding-bottom: 40px;
   background-color: #eee;
 }
@@ -23,7 +23,7 @@ body {
   font-size: 18px;
   padding: 5px 10px 5px 10px;
   text-decoration: none;
-  padding-top: 40px;
+
 }
 
 .btn-add:hover {
