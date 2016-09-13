@@ -28,7 +28,7 @@
     $description=htmlspecialchars($designs['description']);
     $description=preg_replace('#&lt;(/?(?:br /))&gt;#', '<\1>', $description);
 
-    $a = print_r($designs);
+    //$a = print_r($designs);
     
     $filename=$designs['file'];
   }
