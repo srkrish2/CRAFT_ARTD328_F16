@@ -172,7 +172,7 @@ $conn = connect_to_db();
 						<tr>
 							<td colspan='3' style='border-top:none;'>
 								<p><strong>Your Response: </strong></p>
-								<textarea cols='120' id='b".$value['FeedbackID']."' name='b".$value['FeedbackID']."' rows='3' width='100%'>".$response."</textarea>
+								<textarea cols='100' id='b".$value['FeedbackID']."' name='b".$value['FeedbackID']."' rows='3' width='100%'>".$response."</textarea>
 
 								</td>
 						</tr>
@@ -185,7 +185,7 @@ $conn = connect_to_db();
 						 echo " </tbody></table>";
 						 echo "</form>";
 						 	echo "<div style='text-align:center;margin-top:20px;margin-bottom:20px'>";
-							 echo "<button type='submit' class='btn-submit' id='submit' onclick='submit();'>Submit</button> ";
+							 echo "<button type='submit' class='btn-submit' id='submit' onclick='save();'>Submit</button> ";
 							echo "</div>";
 					}
 					else
@@ -219,7 +219,7 @@ function rate(_name, number){
 }
 
 
- function submit(){
+ function save(){
  	
  	 $(':radio').each(function () {
         name = $(this).attr('name');
