@@ -123,8 +123,14 @@
             {
               mysqli_stmt_bind_param($stmt,"i",$teamid);
               mysqli_stmt_execute($stmt);
-              $result = $stmt->store_result();
-              $getnum=$result->num_rows; 
+              $result = $stmt->get_result();
+              if (mysqli_num_rows($result) > 0) {
+                // output data of each row
+                while($row = mysqli_fetch_assoc($result)) {
+                  $feedbacks[] = $row;
+                }
+              }
+              $getnum=count($feedbacks); 
             }
 
             echo " <div class='col-sm-4 col-md-3'> ";
