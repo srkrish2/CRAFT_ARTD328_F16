@@ -64,7 +64,7 @@ $isOkay=true;
 			}
 
 		    if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $newFilePath)) {
-		    	echo $newFilePath;
+		    	//echo $newFilePath;
 		    	$sql="UPDATE Designs SET file=? WHERE DesignID = ? ";
 				if($stmt=mysqli_prepare($conn,$sql))
 				{
@@ -78,7 +78,7 @@ $isOkay=true;
 			        echo "Sorry, there was an error uploading your file.";
 		    	}
 			}
-			echo $_upload_file;
+			echo $design_id;
 		}
 	}
 
