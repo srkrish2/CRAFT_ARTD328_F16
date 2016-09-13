@@ -158,6 +158,7 @@
           var end = Date.getTime();
           var timespent = end - start;
           document.getElementById('timespent').value = timespent;
+          alert("submitting");
           $("#feedback_form").submit();
             
         }else
