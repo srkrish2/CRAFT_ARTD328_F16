@@ -26,8 +26,6 @@ $conn = connect_to_db();
 	$design_information = $result->fetch_assoc();
 		$title=htmlspecialchars($design_information['title']);
 		$title=preg_replace('#&lt;(/?(?:br /))&gt;#', '<\1>', $title); 	
-
-		$type=$design_information['type'];
 			
    		$description=htmlspecialchars($design_information['description']);
 		$description=preg_replace('#&lt;(/?(?:br /))&gt;#', '<\1>', $description);
