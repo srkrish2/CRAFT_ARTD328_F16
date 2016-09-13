@@ -249,7 +249,7 @@ function rate(_name, number){
 
 	var sels = document.getElementsByTagName("textarea");
 	for (var i=0,n=sels.length;i<n;i++) {
-		if(!$.trim(sels[i].val())) {
+		if(!$.trim($(sels[i]).val())) {
 		        isOkay = false; // disallow submit
 		}
 	}
@@ -267,7 +267,7 @@ function rate(_name, number){
  		//alert("Okay");
  	}
  	else{
- 		alert("You have some feedback not been rated. (colored in red). Please rate them."); 	
+ 		alert("You have some feedback not been rated. Please rate them."); 	
  	}
 
  	
