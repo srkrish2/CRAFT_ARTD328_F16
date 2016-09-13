@@ -12,6 +12,21 @@
  $email=$_POST['_email'];
  $timespent=$_POST['timespent'];
 
+ //************ Find out if writer is random or peer mentor
+$insertsql = "SELECT * FROM `u_Designer` WHERE DesignerID=?";
+ if($stmt=mysqli_prepare($conn,$insertsql))
+  {
+    mysqli_stmt_bind_param($stmt,"i",$writerid);
+    mysqli_stmt_execute($stmt);  
+    $result = $stmt->get_result();
+    $design=$result->fetch_assoc() ; 
+    $mentor = $design['mentor'] ;
+    mysqli_stmt_close($stmt); 
+  }
+  else{
+    $isOkay = false;
+  }
+
 //************ Save Feedback
 $insertsql = "INSERT INTO `Feedback`(`WriterID`, `DesignID`, `version`, `content`, `start_time`, `end_time`, `mentor`) VALUES (?, ?, ?, ?, ?, ?, ?)";
  if($stmt=mysqli_prepare($conn,$insertsql))
