@@ -68,7 +68,7 @@ $isOkay=true;
 		    	$sql="UPDATE Designs SET file=? WHERE DesignID = ? ";
 				if($stmt=mysqli_prepare($conn,$sql))
 				{
-					mysqli_stmt_bind_param($stmt,"si",$target_file,$design_id);
+					mysqli_stmt_bind_param($stmt,"si",$newFilePath,$design_id);
 					if(mysqli_stmt_execute($stmt)){
 					}
 					else{
@@ -78,7 +78,6 @@ $isOkay=true;
 			        echo "Sorry, there was an error uploading your file.";
 		    	}
 			}
-			echo $design_id;
 		}
 	}
 
