@@ -239,13 +239,13 @@ function rate(_name, number){
         }
     });
 
-    $("textarea").each(function(){
-        name = $(this).attr('name');
-        if ( !$.trim(document.getElementsByName(name).val())) {
-            $('#div-'+name).addClass("has-error");
-            isOkay = false;
-        }
-    });
+    // $("textarea").each(function(){
+    //     name = $(this).attr('name');
+    //     if ( !$.trim(document.getElementsByName(name).val())) {
+    //         $('#div-'+name).addClass("has-error");
+    //         isOkay = false;
+    //     }
+    // });
 
 	var sels = document.getElementsByTagName("select");
 	for (var i=0,n=sels.length;i<n;i++) {
