@@ -44,7 +44,7 @@
 	  $(document).ready(function(){
 	    $('#logout').click(function(){
 	        alert("logging out");
-	        $.post('logout.php', function (response) {
+	        $.post('../webpage-utility/logout.php', function (response) {
 	            window.location.href='../index.php';
 	        });
 	    });
