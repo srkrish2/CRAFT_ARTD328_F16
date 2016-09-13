@@ -161,7 +161,7 @@
           </div>
 
             <div style="text-align:center;margin-top:20px;">
-            <button type="submit" class="btn-submit" id="submit-bn" onclick="submit();">Submit</button> 
+            <button type="submit" class="btn-submit" id="submit-bn" onclick="save();">Submit</button> 
             </div>
             
             <form class="hidden" action="post_survey_history.php?mid=<?php echo $mid;?>&writerid=<?php echo $writerid;?>" method="post" id="feedback_form" name="feedback_form">
@@ -187,10 +187,11 @@
     );
 
     $(document).ready(function() {
-      start = Date.getTime();
+      var d = new Date();
+      start = d.getTime();
     }
 
-    function submit(){
+    function save(){
       
         var errorMsg='';
           $("#error_alert").hide();
@@ -215,9 +216,10 @@
         }
 
         if(isOkay==true){
-
+          $("#feedback_form [name=_email]").val( $("#email").val() );
           $("#feedback_form [name=_fbk-text]").val( $("#fbk-text").val() );
-          var end = Date.getTime();
+          var d = new Date();
+          end = d.getTime();
           var timespent = end - start;
           document.getElementById('timespent').value = timespent;
           $("#feedback_form").submit();
