@@ -125,7 +125,7 @@
 
     $(document).ready(function() {
       start = Date.getTime();
-    }
+    });
 
     function save(){
       
