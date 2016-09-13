@@ -125,6 +125,7 @@
 
     $(document).ready(function() {
       start = Date.getTime();
+      alert(start);
     });
 
     function save(){
@@ -140,7 +141,7 @@
            $('#email-div').addClass("has-error-text");
            isOkay = false;
           }
-
+alert("submitting");
         var multiline= $('#fbk-text').val().replace(/\r?\n/g, '<br />');
         $('#fbk-text').val( $.trim( multiline ));
 
@@ -150,7 +151,7 @@
            errorMsg += 'Please provide feedback on the design. ';
            isOkay = false;
         }
-
+alert("submitting");
         if(isOkay==true){
 
           $("#feedback_form [name=_fbk-text]").val( $("#fbk-text").val() );
