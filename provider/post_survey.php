@@ -13,8 +13,6 @@
  $timespent=$_POST['timespent'];
  $start_time=0;
 
-  $fbktext= mysqli_real_escape_string($conn, nl2br( $_POST['fbktext'] ));
-$email=mysqli_real_escape_string($conn, nl2br($_POST['email']));
 
  //************ Find Design ID
 $designidsql = "SELECT * From Designs Where mid=?";
