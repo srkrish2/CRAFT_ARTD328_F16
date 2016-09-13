@@ -247,6 +247,13 @@ function rate(_name, number){
     //     }
     // });
 
+	var sels = document.getElementsByTagName("textarea");
+	for (var i=0,n=sels.length;i<n;i++) {
+		if(!$.trim(sels[i].val())) {
+		        isOkay = false; // disallow submit
+		}
+	}
+
 	var sels = document.getElementsByTagName("select");
 	for (var i=0,n=sels.length;i<n;i++) {
 		if(sels[i].selectedIndex <1){
