@@ -88,8 +88,6 @@ function submit(){
                 url: "login_verify.php",
                 data: { inputEmail:$.trim($("input#inputEmail").val()),inputPassword:$.trim($("input#inputPassword").val())},
                 success: function(data){
-                  alert("here");
-                  alert(data);
                   switch(data)
                   {
                     case "email_not_exit":
@@ -105,11 +103,6 @@ function submit(){
                        $("#result").text("Log in failed. Please contact the administrator at design4uiuc@gmail.com .");
                       break;
                     }
-                  // },
-                  // error:function(exception){
-                  //   alert("here2");
-                  //   $("#result").text('Exeption:'+exception));
-                  // }
                    
                 }
             });
