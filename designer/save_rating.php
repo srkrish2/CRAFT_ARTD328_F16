@@ -13,9 +13,6 @@ $conn = connect_to_db();
 
 foreach ($_POST as $key => $value)
 {
-
-	
-	
     if (strpos($key,'a') !== false) {// action
    		$feedbackID = substr($key,1);
    		$action = htmlspecialchars($value);
@@ -32,7 +29,6 @@ foreach ($_POST as $key => $value)
 			}
 			else {$cat=2;}
 		}
-		else {$cat=2;}
 		if($cat==1){
 			$sql="UPDATE Feedback_rating SET action=? WHERE FeedbackID=?";
 			if($stmt=mysqli_prepare($conn,$sql)){
@@ -70,7 +66,6 @@ foreach ($_POST as $key => $value)
 			}
 			else {$cat=2;}
 		}
-		else {$cat=2;}
 		if($cat==1){
 			$sql="UPDATE Feedback_rating SET response=? WHERE FeedbackID=?";
 			if($stmt=mysqli_prepare($conn,$sql)){
@@ -109,7 +104,6 @@ foreach ($_POST as $key => $value)
 			}
 			else {$cat=2;}
 		}
-		else {$cat=2;}
 		if($cat==1){
 			$sql="UPDATE Feedback_rating SET rating=? WHERE FeedbackID=?";
 			if($stmt=mysqli_prepare($conn,$sql)){
