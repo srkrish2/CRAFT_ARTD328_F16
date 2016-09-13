@@ -40,7 +40,7 @@
     <?php include('../webpage-utility/ele_header.php');?>
    <title>Provide Feedback</title>
     <!-- Custom styles for this template -->
-    <link rel="stylesheet" type="text/css" href="dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../dist/css/bootstrap.min.css">
     <link href="../css/provider.css" rel="stylesheet">
 
   </head>
