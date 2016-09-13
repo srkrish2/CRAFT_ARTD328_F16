@@ -172,7 +172,7 @@ $conn = connect_to_db();
 						<tr>
 							<td colspan='3' style='border-top:none;'>
 								<p><strong>Your Response: </strong></p>
-								<textarea width='100%' id='b".$value['FeedbackID']."' name='b".$value['FeedbackID']."' rows='3' width='100%'>".$response."</textarea>
+								<textarea width='60' id='b".$value['FeedbackID']."' name='b".$value['FeedbackID']."' rows='3' width='100%'>".$response."</textarea>
 
 								</td>
 						</tr>
