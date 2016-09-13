@@ -155,6 +155,7 @@
         if(isOkay==true){
 
           $("#feedback_form [name=_fbk-text]").val( $("#fbk-text").val() );
+          $("#feedback_form [name=_email]").val( $("#email").val() );
           var end = Date.getTime();
           var timespent = end - start;
           document.getElementById('timespent').value = timespent;
