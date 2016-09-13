@@ -131,7 +131,7 @@
 
             echo "<a href='rate_comment.php?design_id=".$value['DesignID']."'><img id='img-preview' border=0 src='../design/".$value['file']."' onmouseover='' style='cursor: pointer;'></a>";
 
-            echo " <div style='padding-left:10px;'><strong>".htmlspecialchars($value['title'])."</strong></div> <div style='padding-top:10px;padding-left:10px;'>".htmlspecialchars($stage)."</div>";
+            echo " <div style='padding-top:10px;padding-left:10px;'><strong>".htmlspecialchars($value['title'])."</strong></div> <div style='padding-left:10px;'>".htmlspecialchars($stage)."</div>";
             echo "<hr>";
 
             echo "<div style='text-align:right;padding-bottom:10px;'>";           
