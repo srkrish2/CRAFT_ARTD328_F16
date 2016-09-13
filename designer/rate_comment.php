@@ -268,7 +268,6 @@ function rate(_name, number){
 
 
  	if(isOkay == true)  {
- 		
 
  		$("#rating-form").submit();
  		//alert("Okay");

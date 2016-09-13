@@ -1,6 +1,6 @@
 <?php
 
-
+echo "<script type='text/javascript'>alert('".$_POST."');</script>";
 session_start();
 if(!$_SESSION['designer_id']){header('Location: ../index.php');  die();}
 if(!$_GET['design_id']){header('Location: ../index.php');  die();}
