@@ -27,9 +27,11 @@
     $stage=$row['stage'];
     $description=htmlspecialchars($designs['description']);
     $description=preg_replace('#&lt;(/?(?:br /))&gt;#', '<\1>', $description);
+
+    $a = print_r($designs);
     
     $filename=$designs['file'];
-    echo "<script type='text/javascript'>alert(".$designs.");</script>";
+    echo "<script type='text/javascript'>alert(".$a.");</script>";
   }
 
 ?>
