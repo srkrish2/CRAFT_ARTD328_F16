@@ -115,7 +115,7 @@ $conn = connect_to_db();
 							    $designer_rating = $result['rating'];
 								$action = $result['action'];
 								$response = $result['response'];
-								echo "<script type='text/javascript'>alert('".$response."')</script>";
+								echo "<script type='text/javascript'>alert('".$designer_rating."')</script>";
 							  }
 
 							$content=htmlspecialchars($value['content']);
