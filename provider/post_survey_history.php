@@ -5,12 +5,43 @@
   $mid = $_SESSION['mid'];
   $writerid = $_SESSION['writerid'];
   if(!$mid||!$writerid){header('Location: feedback_error.php');}
- include_once($_SERVER['DOCUMENT_ROOT'].'/mentoring/webpage-utility/db_utility.php');
+ include_once('../webpage-utility/db_utility.php');
  $conn = connect_to_db();
 
  $fbktext=$_POST['_fbk-text'];
  $email=$_POST['_email'];
  $timespent=$_POST['timespent'];
+
+  //************ Find Design ID
+$designidsql = "SELECT * From Designs Where mid=?";
+ if($stmt=mysqli_prepare($conn,$designidsql))
+  {
+    mysqli_stmt_bind_param($stmt,"s",$mid);
+    mysqli_stmt_execute($stmt);
+    $result = $stmt->get_result();
+    $design=$result->fetch_assoc() ; 
+    $designid = $design['DesignID'];
+    $version = $design['stage'];     
+    mysqli_stmt_close($stmt); 
+  }
+  else{
+    $isOkay = false;
+  }
+
+ //************ Find out if writer is random or peer mentor
+$insertsql = "SELECT * FROM `u_Designer` WHERE DesignerID=?";
+ if($stmt=mysqli_prepare($conn,$insertsql))
+  {
+    mysqli_stmt_bind_param($stmt,"i",$writerid);
+    mysqli_stmt_execute($stmt);  
+    $result = $stmt->get_result();
+    $design=$result->fetch_assoc() ; 
+    $mentor = $design['mentor'] ;
+    mysqli_stmt_close($stmt); 
+  }
+  else{
+    $isOkay = false;
+  }
 
 //************ Save Feedback
 $insertsql = "INSERT INTO `Feedback`(`WriterID`, `DesignID`, `version`, `content`, `start_time`, `end_time`, `mentor`) VALUES (?, ?, ?, ?, ?, ?, ?)";
@@ -38,8 +69,8 @@ $insertsql = "INSERT INTO `Feedback`(`WriterID`, `DesignID`, `version`, `content
     <link rel="icon" href="logo.png">
  <script src="js/jquery-1.11.3.min.js"></script>
     <!-- Bootstrap core CSS and js -->
-    <link rel="stylesheet" type="text/css" href="dist/css/bootstrap.min.css">
-    <script type="text/javascript" src="dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../dist/css/bootstrap.min.css">
+    <script type="text/javascript" src="../dist/js/bootstrap.min.js"></script>
 
     <!-- JQuery and Google font -->
     <link href='https://fonts.googleapis.com/css?family=Exo:100,400' rel='stylesheet' type='text/css'>

@@ -54,21 +54,6 @@ $designidsql = "SELECT * From Designs Where mid=?";
   	$isOkay = false;
   }
 
-//************ Find out if writer is random or peer mentor
-$insertsql = "SELECT * FROM `u_Designer` WHERE DesignerID=?";
- if($stmt=mysqli_prepare($conn,$insertsql))
-  {
-    mysqli_stmt_bind_param($stmt,"i",$writerid);
-    mysqli_stmt_execute($stmt);  
-    $result = $stmt->get_result();
-    $design=$result->fetch_assoc() ; 
-    $mentor = $design['mentor'] ;
-    mysqli_stmt_close($stmt); 
-  }
-  else{
-    $isOkay = false;
-  }
-
 //************ Save Survey
 $insertsql = "INSERT INTO `Survey1`(`WriterID`,`t_design`, `t_history`, `t_write`, `e1`, `e2`, `e3`, `d1`, `d2`, `d3`, `d4`, `m1`, `m2`, `m3`, `a1`, `a2`, `a3`, `a4`, `num`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
  if($stmt=mysqli_prepare($conn,$insertsql))

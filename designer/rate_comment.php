@@ -52,8 +52,6 @@ $conn = connect_to_db();
     mysqli_stmt_close($stmt); 
   }
 
-//Get Feedback Rating and Response
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -108,15 +106,16 @@ $conn = connect_to_db();
 					    	echo "<div id='div-".$value['FeedbackID']."' >";
 						   	echo "<tr>";
 
-						   	  $sql="SELECT * FROM Feedback_Rating WHERE FeedbackID=?";
+						   	  $sql="SELECT * FROM Feedback_Rating WHERE FeedbackID=? AND RaterID=?";
 							  if($stmt=mysqli_prepare($conn,$sql))
 							  {
-							    mysqli_stmt_bind_param($stmt,"i",$value['FeedbackID']);
+							    mysqli_stmt_bind_param($stmt,"ii",$value['FeedbackID'],$designer_id);
 							    mysqli_stmt_execute($stmt);
 							    $result = $stmt->get_result();
 							    $designer_rating = $result['rating'];
 								$action = $result['action'];
 								$response = $result['response'];
+								echo "<script>alert(".$response.")</script>";
 							  }
 
 							$content=htmlspecialchars($value['content']);
@@ -171,7 +170,7 @@ $conn = connect_to_db();
 							</td>
 						</tr>
 						<tr>
-							<td colspan='2'>
+							<td colspan='3' style='border-top:none;'>
 								<p><strong>Your Response: </strong></p>";
 									if(response==""){
 										echo "<textarea id='b".$value['FeedbackID']."' name='b".$value['FeedbackID']."' rows='3' width='100%' />";
