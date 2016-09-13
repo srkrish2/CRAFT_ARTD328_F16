@@ -113,9 +113,19 @@
               case 4: $stage = "Final Design"; break;
             }
             //*************** Get Feedback number for each design**********//
-            $fbknum="SELECT * From `Feedback` WHERE `f_DesignID` =".$value['DesignID'];              
-            $result2= mysqli_query($conn,$fbknum);
-            $getnum=mysqli_num_rows($result2); 
+            // $fbknum="SELECT * From `Feedback` WHERE `f_DesignID` =".$value['DesignID'];              
+            // $result2= mysqli_query($conn,$fbknum);
+            // $getnum=mysqli_num_rows($result2); 
+
+            $sql="SELECT * FROM Feedback WHERE DesignID=?";
+            if($stmt=mysqli_prepare($conn,$sql))
+            {
+              mysqli_stmt_bind_param($stmt,"i",$teamid);
+              mysqli_stmt_execute($stmt);
+              $result = $stmt->get_result();
+              $getnum=mysqli_num_rows($result2); 
+            }
+
             echo " <div class='col-sm-4 col-md-3'> ";
             echo "<div class='thumbnail' style='padding-top:10px;padding-right:10px;padding-left:10px;'>";
 
