@@ -17,7 +17,7 @@ include_once('../webpage-utility/db_utility.php');
 $conn = connect_to_db();
 
 //Get Design Info
-  $sql="SELECT * FROM Design WHERE DesignID=?";
+  $sql="SELECT * FROM Designs WHERE DesignID=?";
   if($stmt=mysqli_prepare($conn,$sql))
   {
     mysqli_stmt_bind_param($stmt,"i",$design_id);
@@ -80,7 +80,6 @@ $conn = connect_to_db();
 			<div class="row">				
 				 <div class="img-div" onmouseover="" style="cursor: pointer;" >
 				 <img width="auto" height="300px" src=<?php echo $filename; ?> onClick="view(this);" >
-				 <?php echo "<script type='text/javascript'>alert(".$filename.");</script>" ?>
 				 <p><em style="color:grey">* Click on the image to enlarge </em></p>
 				</div>
 			 	<div style="margin-right:30px;">
