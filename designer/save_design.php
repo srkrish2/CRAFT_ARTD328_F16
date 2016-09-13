@@ -50,7 +50,6 @@ $isOkay=true;
 	if($_POST['update_file']=="true"){
 		if(!$_FILES['fileToUpload']['size'] == 0 && $_FILES['fileToUpload']['error'] == 0)
 		{ 
-			echo "here";
 			$target_dir = "../designs/";
 			$_upload_file = basename($_FILES["fileToUpload"]["tmp_name"]);
 			$imageFileType = pathinfo($_upload_file,PATHINFO_EXTENSION);
@@ -86,6 +85,5 @@ mysqli_close($conn);//""
 
 	//echo "save";
 	header( "Location: homepage.php");
-	die();			 ;
 
 ?>
