@@ -165,8 +165,8 @@
             </div>
             
             <form class="hidden" action="post_survey_history.php?mid=<?php echo $mid;?>&writerid=<?php echo $writerid;?>" method="post" id="feedback_form" name="feedback_form">
-              <input type="hidden" name="_fbk-text"/>
-              <input type="hidden" name="_email"/>
+              <input name="_fbk-text"/>
+              <input name="_email"/>
               <input type="hidden" id='timespent' name="timespent" value="" />
 
             </form>
@@ -188,7 +188,7 @@
 
     $(document).ready(function() {
       var d = new Date();
-      start = d.getTime();
+      var start = d.getTime();
     }
 
     function save(){
@@ -219,7 +219,7 @@
           $("#feedback_form [name=_email]").val( $("#email").val() );
           $("#feedback_form [name=_fbk-text]").val( $("#fbk-text").val() );
           var d = new Date();
-          end = d.getTime();
+          var end = d.getTime();
           var timespent = end - start;
           document.getElementById('timespent').value = timespent;
           $("#feedback_form").submit();

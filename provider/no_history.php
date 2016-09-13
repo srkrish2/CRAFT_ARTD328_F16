@@ -123,7 +123,7 @@
 
     $(document).ready(function() {
       var d = new Date();
-      start = d.getTime();
+      var start = d.getTime();
     });
 
     function save(){
@@ -139,6 +139,7 @@
            $('#email-div').addClass("has-error-text");
            isOkay = false;
           }
+
         var multiline= $('#fbk-text').val().replace(/\r?\n/g, '<br />');
         $('#fbk-text').val( $.trim( multiline ));
 
