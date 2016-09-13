@@ -112,10 +112,11 @@ $conn = connect_to_db();
 							    mysqli_stmt_bind_param($stmt,"ii",$value['FeedbackID'],$designer_id);
 							    mysqli_stmt_execute($stmt);
 							    $result = $stmt->get_result();
+							    print_r($result);
 							    $designer_rating = $result['rating'];
 								$action = $result['action'];
 								$response = $result['response'];
-								echo "<script type='text/javascript'>alert('".$designer_rating."')</script>";
+								
 							  }
 
 							$content=htmlspecialchars($value['content']);
