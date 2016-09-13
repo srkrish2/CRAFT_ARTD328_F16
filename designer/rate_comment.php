@@ -173,13 +173,13 @@ $conn = connect_to_db();
 						</tr>
 						<tr>
 							<td colspan='2'>
-								<p><strong>Your Response: </strong></p>".
+								<p><strong>Your Response: </strong></p>";
 									if(response==""){
 										echo "<textarea id='b".$value['FeedbackID']."' name='b".$value['FeedbackID']."' rows='3' width='100%' />";
 									} else {
 										echo "<p>.".$response."</p>";
 									}
-							."</td>
+							echo "</td>
 						</tr>
 						</div>
 						";
