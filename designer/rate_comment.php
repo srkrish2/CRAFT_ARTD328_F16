@@ -199,6 +199,7 @@ $conn = connect_to_db();
 			
 
 </div>
+</div>
 <script>
  function view(imgsrc) {
       viewwin = window.open(imgsrc.src,'viewwin', 'width=800,height=400px'); 
