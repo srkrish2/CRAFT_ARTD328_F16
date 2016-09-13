@@ -7,7 +7,7 @@
 
 //$designer_id = 53;
 
-include_once($_SERVER['DOCUMENT_ROOT'].'/reflection/webpage-utility/db_utility.php');
+include_once('../webpage-utility/db_utility.php');
 $conn = connect_to_db();
 $isOkay= true;
 
@@ -109,7 +109,7 @@ else{
 
   <title> Final Survey </title>
   <?php 
-    include('/mentoring/webpage-utility/ele_header.php'); 
+    include('../webpage-utility/ele_header.php'); 
     ?>
   <script src="js/jquery-1.11.3.min.js"></script>
 
