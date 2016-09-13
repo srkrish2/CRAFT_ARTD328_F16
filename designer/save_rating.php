@@ -29,9 +29,9 @@ foreach ($_POST as $key => $value)
 			else {$cat=2;}
 		}
 		if($cat==1){
-			$sql="UPDATE Feedback_rating SET action=? WHERE FeedbackID=?";
+			$sql="UPDATE Feedback_rating SET action=? WHERE FeedbackID=? AND RaterID=?";
 			if($stmt=mysqli_prepare($conn,$sql)){
-				mysqli_stmt_bind_param($stmt,"ii",$action,$feedbackID);
+				mysqli_stmt_bind_param($stmt,"iii",$action,$feedbackID,$designer_id);
 				mysqli_stmt_execute($stmt);
 			}
 			else {
@@ -66,9 +66,9 @@ foreach ($_POST as $key => $value)
 			else {$cat=2;}
 		}
 		if($cat==1){
-			$sql="UPDATE Feedback_rating SET response=? WHERE FeedbackID=?";
+			$sql="UPDATE Feedback_rating SET response=? WHERE FeedbackID=? AND RaterID=?";
 			if($stmt=mysqli_prepare($conn,$sql)){
-				mysqli_stmt_bind_param($stmt,"si",$response,$feedbackID);
+				mysqli_stmt_bind_param($stmt,"sii",$response,$feedbackID,$designer_id);
 				mysqli_stmt_execute($stmt);
 			}
 			else {
@@ -104,9 +104,9 @@ foreach ($_POST as $key => $value)
 			else {$cat=2;}
 		}
 		if($cat==1){
-			$sql="UPDATE Feedback_rating SET rating=? WHERE FeedbackID=?";
+			$sql="UPDATE Feedback_rating SET rating=? WHERE FeedbackID=? AND RaterID=?";
 			if($stmt=mysqli_prepare($conn,$sql)){
-				mysqli_stmt_bind_param($stmt,"ii",$quality,$feedbackID);
+				mysqli_stmt_bind_param($stmt,"iii",$quality,$feedbackID,$designer_id);
 				mysqli_stmt_execute($stmt);
 			}
 			else {
