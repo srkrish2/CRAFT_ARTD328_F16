@@ -1,16 +1,16 @@
 <?php 
-  // session_start();
-  // $_SESSION['mid']=$_GET['mid'];
-  // $_SESSION['writerid']=$_GET['writerid'];
-  // $mid = $_SESSION['mid'];
-  // $writerid = $_SESSION['writerid'];
-  // if(!$mid||!$writerid){header('Location: feedback_error.php');}
-//  include_once($_SERVER['DOCUMENT_ROOT'].'/mentoring/webpage-utility/db_utility.php');
-//  $conn = connect_to_db();
+  session_start();
+  $_SESSION['mid']=$_GET['mid'];
+  $_SESSION['writerid']=$_GET['writerid'];
+  $mid = $_SESSION['mid'];
+  $writerid = $_SESSION['writerid'];
+  if(!$mid||!$writerid){header('Location: feedback_error.php');}
+ include_once($_SERVER['DOCUMENT_ROOT'].'/mentoring/webpage-utility/db_utility.php');
+ $conn = connect_to_db();
 
-//  $fbktext=$_POST['_fbk-text'];
-//  $email=$_POST['_email'];
-//  $timespent=$_POST['timespent'];
+ $fbktext=$_POST['_fbk-text'];
+ $email=$_POST['_email'];
+ $timespent=$_POST['timespent'];
 
 //************ Save Feedback
 $insertsql = "INSERT INTO `Feedback`(`WriterID`, `DesignID`, `version`, `content`, `start_time`, `end_time`, `mentor`) VALUES (?, ?, ?, ?, ?, ?, ?)";
