@@ -13,7 +13,7 @@ $description="";
 $type="";
 $filename="";
  
-include_once($_SERVER['DOCUMENT_ROOT'].'/mentoring/webpage-utility/db_utility.php');
+include_once('../webpage-utility/db_utility.php');
 $conn = connect_to_db();
 
 //Get Design Info
@@ -61,14 +61,14 @@ $conn = connect_to_db();
 <html>
 <head>
   <title> CRAFT - View Feedback  </title>
-  <?php include($_SERVER['DOCUMENT_ROOT'].'/mentoring/webpage-utility/ele_header.php');?>
+  <?php include('../webpage-utility/ele_header.php');?>
   <script src="../js/jquery-1.11.3.min.js"></script>
  <link href="rate_comment.css" rel="stylesheet">
 </head>
 
 <body>
 
-<?php include($_SERVER['DOCUMENT_ROOT'].'/mentoring/webpage-utility/ele_nav.php');?>
+<?php include('../webpage-utility/ele_nav.php');?>
   
 
 <div class="main-section">
