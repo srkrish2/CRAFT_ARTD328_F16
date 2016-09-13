@@ -5,7 +5,7 @@
   $mid = $_SESSION['mid'];
   $writerid = $_SESSION['writerid'];
   if(!$mid||!$writerid){header('Location: feedback_error.php');}
-  include_once($_SERVER['DOCUMENT_ROOT'].'/mentoring/webpage-utility/db_utility.php');
+  include_once('../webpage-utility/db_utility.php');
   $conn = connect_to_db();
 
   //Get design
@@ -37,11 +37,11 @@
 <html lang="en">
   <head>
    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    <?php include($_SERVER['DOCUMENT_ROOT'].'/mentoring/webpage-utility/ele_header.php');?>
+    <?php include('../webpage-utility/ele_header.php');?>
    <title>Provide Feedback</title>
     <!-- Custom styles for this template -->
     <link rel="stylesheet" type="text/css" href="dist/css/bootstrap.min.css">
-    <link href="/mentoring/css/provider.css" rel="stylesheet">
+    <link href="../css/provider.css" rel="stylesheet">
 
   </head>
 
@@ -67,7 +67,7 @@
           <!--Design -->      
           <div class="row">       
              <div class="img-div" onmouseover="" style="cursor: pointer;" >
-             <img width="auto" height="200px" src="<?php echo "design/".$filename ?>" onClick="view(this);" >
+             <img width="auto" height="200px" src=<?php echo "'".$filename."'"; ?> onClick="view(this);" >
              <p><em style="color:grey">* Click on the image to enlarge </em></p>
             </div>
             <div style="margin-right:30px;">

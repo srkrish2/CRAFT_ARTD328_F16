@@ -99,7 +99,6 @@
   </head>
 
   <body>
-    <?php include('../webpage-utility/ele_nav.php');?>
 
       <div class="main-section" style="padding-top:50px">
         <div class="container">
@@ -124,7 +123,7 @@
           <div class="row"> 
               <div class="col">      
                <div class="img-div" onmouseover="" style="cursor: pointer;" >
-               <img width="auto" height="200px" src="<?php echo "design/".$p_filename ?>" onClick="view(this);" >
+               <img width="auto" height="200px" src=<?php echo "'".$filename."'"; ?> onClick="view(this);" >
                <p><em style="color:grey">* Click on the image to enlarge </em></p>
                 </div>
               </div>
