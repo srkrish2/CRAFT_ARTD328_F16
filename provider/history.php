@@ -56,7 +56,7 @@
     mysqli_stmt_execute($stmt);  
     $result = $stmt->get_result();
     $design=$result->fetch_assoc() ; 
-    $mentor = $design['mentor'] 
+    $mentor = $design['mentor'] ;
     mysqli_stmt_close($stmt); 
   }
 
