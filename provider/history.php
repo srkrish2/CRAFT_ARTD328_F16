@@ -88,7 +88,7 @@
   echo $response;
   echo $fbktext;
   echo $filename;
-  echo $mentor;
+  echo $design_id;
 
 ?>
 
