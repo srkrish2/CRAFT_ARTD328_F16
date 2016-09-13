@@ -188,7 +188,7 @@
 
     $(document).ready(function() {
       var d = new Date();
-      var start = d.getTime();
+       start = d.getTime();
     });
 
     function save(){
