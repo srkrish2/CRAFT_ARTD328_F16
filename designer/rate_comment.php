@@ -112,7 +112,7 @@ $conn = connect_to_db();
 							    mysqli_stmt_bind_param($stmt,"ii",$value['FeedbackID'],$designer_id);
 							    mysqli_stmt_execute($stmt);
 							    $result = $stmt->get_result();
-							    print_r($result);
+							    $result=$result->fetch_assoc() ; 
 							    $designer_rating = $result['rating'];
 								$action = $result['action'];
 								$response = $result['response'];
