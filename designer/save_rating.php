@@ -50,8 +50,9 @@ foreach ($_POST as $key => $value)
 		
 	}
 
-	$message = "wrong answer";
+	
     else if (strpos($key,'b') !== false) {// response
+    	$message = "wrong answer";
     	echo "<script type='text/javascript'>alert('$message');</script>";
    		$feedbackID = substr($key,1);
    		$text = htmlspecialchars($value);
@@ -81,7 +82,7 @@ foreach ($_POST as $key => $value)
 			}
 		}else if($cat==2){
 			echo "<script type='text/javascript'>alert('$message');</script>";
-			
+
 			$sql="INSERT INTO Feedback_rating (FeedbackID, RaterID, response) VALUES (?,?,?)";
 			if($stmt=mysqli_prepare($conn,$sql)){
 				mysqli_stmt_bind_param($stmt,"iis",$feedbackID, $designer_id, $text);
