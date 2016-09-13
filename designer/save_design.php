@@ -78,7 +78,7 @@ $isOkay=true;
 			        echo "Sorry, there was an error uploading your file.";
 		    	}
 			}
-			echo "here2";
+			echo $_upload_file;
 		}
 	}
 
