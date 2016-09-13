@@ -122,8 +122,8 @@
             {
               mysqli_stmt_bind_param($stmt,"i",$teamid);
               mysqli_stmt_execute($stmt);
-              $result = $stmt->get_result();
-              $getnum=mysqli_num_rows($result2); 
+              $result = $stmt->store_result();
+              $getnum=$result->num_rows; 
             }
 
             echo " <div class='col-sm-4 col-md-3'> ";
