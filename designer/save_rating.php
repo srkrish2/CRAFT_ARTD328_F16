@@ -49,7 +49,10 @@ foreach ($_POST as $key => $value)
 		}
 		
 	}
+
+	$message = "wrong answer";
     else if (strpos($key,'b') !== false) {// response
+    	echo "<script type='text/javascript'>alert('$message');</script>";
    		$feedbackID = substr($key,1);
    		$text = htmlspecialchars($value);
    		$sql="SELECT * FROM Feedback_rating WHERE FeedbackID=? AND RaterID=?";
@@ -66,6 +69,8 @@ foreach ($_POST as $key => $value)
 			else {$cat=2;}
 		}
 		if($cat==1){
+			echo "<script type='text/javascript'>alert('$message');</script>";
+
 			$sql="UPDATE Feedback_rating SET response=? WHERE FeedbackID=? AND RaterID=?";
 			if($stmt=mysqli_prepare($conn,$sql)){
 				mysqli_stmt_bind_param($stmt,"sii",$response,$feedbackID,$designer_id);
@@ -75,6 +80,8 @@ foreach ($_POST as $key => $value)
 			    echo "Error updating record: " . mysqli_error($conn);
 			}
 		}else if($cat==2){
+			echo "<script type='text/javascript'>alert('$message');</script>";
+			
 			$sql="INSERT INTO Feedback_rating (FeedbackID, RaterID, response) VALUES (?,?,?)";
 			if($stmt=mysqli_prepare($conn,$sql)){
 				mysqli_stmt_bind_param($stmt,"iis",$feedbackID, $designer_id, $text);
