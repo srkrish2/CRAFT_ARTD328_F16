@@ -85,9 +85,6 @@
     mysqli_stmt_close($stmt); 
   }
 
-  echo $response;
-  echo $fbktext;
-  echo $filename;
   echo $design_id;
 
 ?>
