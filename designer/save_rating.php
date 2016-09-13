@@ -52,6 +52,7 @@ foreach ($_POST as $key => $value)
     else if (strpos($key,'b') !== false) {// response
    		$feedbackID = substr($key,1);
    		$text = htmlspecialchars($value);
+   		echo $text;
    		$sql="SELECT * FROM Feedback_rating WHERE FeedbackID=? AND RaterID=?";
 							  if($stmt=mysqli_prepare($conn,$sql))
 							  {
