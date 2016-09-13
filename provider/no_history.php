@@ -100,12 +100,12 @@
           </div>
 
             <div style="text-align:center;margin-top:20px;">
-            <button type="submit" class="btn-submit" id="submit" onclick="submit();">Submit</button> 
+            <button type="submit" class="btn-submit" id="submit" onclick="save();">Submit</button> 
             </div>
             
             <form class="hidden" action="post_survey.php?mid=<?php echo $mid;?>&writerid=<?php echo $writerid;?>" method="post" id="feedback_form" name="feedback_form">
-              <input type="hidden" name="_fbk-text"/>
-              <input type="hidden" name="_email"/>
+              <input name="_fbk-text"/>
+              <input name="_email"/>
               <input type="hidden" id='timespent' name="timespent" value="" />
 
             </form>
@@ -129,7 +129,7 @@
       start = Date.getTime();
     }
 
-    function submit(){
+    function save(){
       
         var errorMsg='';
           $("#error_alert").hide();
