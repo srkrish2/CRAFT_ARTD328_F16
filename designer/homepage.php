@@ -35,7 +35,7 @@
   }
 
 
-  $sql="SELECT * FROM Design WHERE teamID=? ORDER BY DesignID ASC";
+  $sql="SELECT * FROM Designs WHERE teamID=? ORDER BY DesignID ASC";
   if($stmt=mysqli_prepare($conn,$sql))
   {
     mysqli_stmt_bind_param($stmt,"i",$teamid);
