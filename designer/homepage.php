@@ -106,7 +106,7 @@
             if( ($count_design % 4)==1 ){
               echo "<div class='row' style='padding-top:30px;''>";
             }
-            switch ($i) {
+            switch ($value['stage']) {
               case 1: $stage = "Concepts"; break;
               case 2: $stage = "Initial Design"; break;
               case 3: $stage = "Revised Design"; break;
