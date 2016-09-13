@@ -5,7 +5,7 @@
   $mid = $_SESSION['mid'];
   $writerid = $_SESSION['writerid'];
   if(!$mid||!$writerid){header('Location: feedback_error.php');}
-  include_once($_SERVER['DOCUMENT_ROOT'].'/mentoring/webpage-utility/db_utility.php');
+  include_once($'../webpage-utility/db_utility.php');
   $conn = connect_to_db();
 
   //Get design
@@ -29,7 +29,7 @@
     $description=preg_replace('#&lt;(/?(?:br /))&gt;#', '<\1>', $description);
     
     $filename=$designs['file'];
-    $team=$designs['teamID']
+    $team=$designs['teamID'];
   }
 
   //Get previous iteration design

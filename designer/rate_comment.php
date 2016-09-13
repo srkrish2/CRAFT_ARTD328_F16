@@ -64,7 +64,7 @@ $conn = connect_to_db();
   <?php include('../webpage-utility/ele_header.php');?>
   <script src="../js/jquery-1.11.3.min.js"></script>
  <link href="rate_comment.css" rel="stylesheet">
- <link href="../css/designer.css" rel="stylesheet">
+ <link href="../css/provider.css" rel="stylesheet">
 </head>
 
 <body>
