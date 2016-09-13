@@ -112,6 +112,7 @@
               case 3: $stage = "Revised Design"; break;
               case 4: $stage = "Final Design"; break;
             }
+            echo "<script type='text/javascript'>alert(".$stage.");</script>";
             //*************** Get Feedback number for each design**********//
             // $fbknum="SELECT * From `Feedback` WHERE `f_DesignID` =".$value['DesignID'];              
             // $result2= mysqli_query($conn,$fbknum);
