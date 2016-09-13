@@ -72,7 +72,7 @@ foreach ($_POST as $key => $value)
 		if($cat==1){
 			$sql="UPDATE Feedback_rating SET response=? WHERE FeedbackID=? AND RaterID=?";
 			if($stmt=mysqli_prepare($conn,$sql)){
-				mysqli_stmt_bind_param($stmt,"sii",$response,$feedbackID,$designer_id);
+				mysqli_stmt_bind_param($stmt,"sii",$text,$feedbackID,$designer_id);
 				mysqli_stmt_execute($stmt);
 				// $message= $designer_id." ".$feedbackID;
 			 //    			echo "<script type='text/javascript'>alert('$message');</script>";
