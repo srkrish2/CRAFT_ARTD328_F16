@@ -33,7 +33,7 @@
   }
 
   //Get previous iteration design
-  $sql="SELECT * FROM Designs WHERE (teamID=? AND stage=?)";
+  $sql="SELECT * FROM Designs WHERE teamID=? AND stage=?";
   if($stmt=mysqli_prepare($conn,$sql))
   {
     $p_stage = $stage - 1;
@@ -84,8 +84,6 @@
     $response = $rating['response'];
     mysqli_stmt_close($stmt); 
   }
-
-  echo $title;
 
 ?>
 
