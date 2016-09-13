@@ -172,8 +172,8 @@ $conn = connect_to_db();
 						<tr>
 							<td colspan='3' style='border-top:none;'>
 								<p><strong>Your Response: </strong></p>
-								<textarea cols='100' id='t".$value['FeedbackID']."' name='t".$value['FeedbackID']."' rows='3' width='100%'>".$response."</textarea>
-								<input type='hidden' id='b".$value['FeedbackID']."' name='b".$value['FeedbackID']."'>
+								<textarea cols='100' id='t".$value['FeedbackID']."' name='b".$value['FeedbackID']."' rows='3' width='100%'>".$response."</textarea>
+								<input type='hidden' id='b".$value['FeedbackID']."' name='t".$value['FeedbackID']."'>
 
 								</td>
 						</tr>
@@ -253,10 +253,10 @@ function rate(_name, number){
 		if(!$.trim($(sels[i]).val())) {
 		        isOkay = false; // disallow submit
 		} else {
-			var multiline= $(sels[i]).val().replace(/\r?\n/g, '<br />');
-			var inputname = sels[i]['name'].replace('t', 'b')
-		 		//$(inputname).val( $.trim( multiline )  );
-		 		$(inputname).val( $(sels[i]).val() );
+			// var multiline= $(sels[i]).val().replace(/\r?\n/g, '<br />');
+			// var inputname = sels[i]['name'].replace('t', 'b')
+		 // 		//$(inputname).val( $.trim( multiline )  );
+		 // 		$(inputname).val( $(sels[i]).val() );
 		}
 	}
 
