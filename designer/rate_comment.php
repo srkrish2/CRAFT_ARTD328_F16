@@ -234,7 +234,6 @@ function rate(_name, number){
         name = $(this).attr('name');
         if (  !$(':radio[name="' + name + '"]:checked').length) {
             $('#div-'+name).addClass("has-error");
-           
             isOkay = false;
         }
     });

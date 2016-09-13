@@ -7,12 +7,9 @@ if(!$_GET['design_id']){header('Location: ../index.php');  die();}
 $design_id=$_GET['design_id'];
 $designer_id=$_SESSION['designer_id'];
 
-include_once('db_utility.php');
+include_once('../webpage-utility/db_utility.php');
 $conn = connect_to_db();
-//************Check Identity
-$checkidentity="Select * From Design INNER JOIN Design_Designer ON Design.DesignID=Design_Designer.f_DesignID WHERE Design.DesignID =".$design_id." AND Design_Designer.f_DesignerID=".$_SESSION['designer_id'] ;
-$result= mysqli_query($conn,$checkidentity);
-if (mysqli_num_rows($result) > 0) {}else {header('Location: ../index.php');die();}
+
 
 foreach ($_POST as $key => $value)
 {
