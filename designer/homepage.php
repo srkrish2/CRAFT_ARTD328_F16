@@ -121,7 +121,7 @@
             $sql="SELECT * FROM Feedback WHERE DesignID=?";
             if($stmt=mysqli_prepare($conn,$sql))
             {
-              mysqli_stmt_bind_param($stmt,"i",$teamid);
+              mysqli_stmt_bind_param($stmt,"i",$value['DesignID']);
               mysqli_stmt_execute($stmt);
               $result = $stmt->get_result();
               if (mysqli_num_rows($result) > 0) {
