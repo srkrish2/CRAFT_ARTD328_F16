@@ -124,6 +124,7 @@
               mysqli_stmt_bind_param($stmt,"i",$value['DesignID']);
               mysqli_stmt_execute($stmt);
               $result = $stmt->get_result();
+              $feedbacks = array();
               if (mysqli_num_rows($result) > 0) {
                 // output data of each row
                 while($row = mysqli_fetch_assoc($result)) {
