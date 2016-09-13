@@ -90,7 +90,8 @@ foreach ($_POST as $key => $value)
 			}
 			else {
 				// $message= "Error updating record: " . mysqli_error($conn);
-			 //    			echo "<script type='text/javascript'>alert('$message');</script>";			}
+			 //    			echo "<script type='text/javascript'>alert('$message');</script>";	
+			 }		
 		}
 		
 	}
