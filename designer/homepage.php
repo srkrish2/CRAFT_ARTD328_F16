@@ -112,7 +112,6 @@
               case 3: $stage = "Revised Design"; break;
               case 4: $stage = "Final Design"; break;
             }
-            echo "<script type='text/javascript'>alert(".$stage.");</script>";
             //*************** Get Feedback number for each design**********//
             // $fbknum="SELECT * From `Feedback` WHERE `f_DesignID` =".$value['DesignID'];              
             // $result2= mysqli_query($conn,$fbknum);
@@ -133,12 +132,15 @@
             echo "<a href='rate_comment.php?design_id=".$value['DesignID']."'><img id='img-preview' border=0 src='../design/".$value['file']."' onmouseover='' style='cursor: pointer;'></a>";
 
             echo " <div style='padding-top:10px;padding-left:10px;'><h5><strong>".htmlspecialchars($value['title'])."</strong></h5></div> <div style='padding-top:10px;padding-left:10px;'><h5>".htmlspecialchars($stage)."</h5></div>";
-            echo " <div style='padding-top:10px;padding-left:10px;'><h5>".$stage."</h5></div> <div style='padding-top:10px;padding-left:10px;'><h5>".htmlspecialchars($stage)."</h5></div>";
             echo "<hr>";
 
             echo "<div style='text-align:right;padding-bottom:10px;'>";           
 
-            echo " <a href='rate_comment.php?design_id=".$value['DesignID']."' > <span class='glyphicon glyphicon-comment'></span>&nbsp".$getnum."</a> ";
+            if($getnum > 0){
+              echo " <a href='rate_comment.php?design_id=".$value['DesignID']."' > <span class='glyphicon glyphicon-comment'></span>&nbsp".$getnum."</a> ";
+            } else {
+              echo " <a href='rate_comment.php?design_id=".$value['DesignID']."' > <span class='glyphicon glyphicon-comment'></span>&nbsp No comments yet</a> ";
+            }
             echo "</div>";
             echo "</div>";
             echo "</div>";
