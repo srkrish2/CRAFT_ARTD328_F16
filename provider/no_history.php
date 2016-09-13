@@ -31,7 +31,6 @@
     $a = print_r($designs);
     
     $filename=$designs['file'];
-    echo "<script type='text/javascript'>alert(".$a.");</script>";
   }
 
 ?>
