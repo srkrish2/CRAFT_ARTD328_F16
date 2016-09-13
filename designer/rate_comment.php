@@ -64,6 +64,7 @@ $conn = connect_to_db();
   <?php include('../webpage-utility/ele_header.php');?>
   <script src="../js/jquery-1.11.3.min.js"></script>
  <link href="rate_comment.css" rel="stylesheet">
+ <link href="../css/designer.css" rel="stylesheet">
 </head>
 
 <body>
@@ -78,7 +79,7 @@ $conn = connect_to_db();
 <!--Design -->			
 			<div class="row">				
 				 <div class="img-div" onmouseover="" style="cursor: pointer;" >
-				 <img width="auto" height="300px" src="<?php echo "../design/".$filename ?>" onClick="view(this);" >
+				 <img width="auto" height="300px" src=<?php echo "'../design/".$filename;."'"; ?> onClick="view(this);" >
 				 <p><em style="color:grey">* Click on the image to enlarge </em></p>
 				</div>
 			 	<div style="margin-right:30px;">
