@@ -8,17 +8,17 @@
     <link rel="icon" href="logo.png">
 
  <!-- Bootstrap core CSS and js -->
-    <link rel="stylesheet" type="text/css" href="/mentoring/dist/css/bootstrap.min.css">
-    <script type="text/javascript" src="/mentoring/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../dist/css/bootstrap.min.css">
+    <script type="text/javascript" src="../dist/js/bootstrap.min.js"></script>
 
 <!-- JQuery and Google font -->
     <link href='https://fonts.googleapis.com/css?family=Exo:100,400' rel='stylesheet' type='text/css'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
 <!-- Custom styles for this template -->
-    <link rel="stylesheet" type="text/css" href="/mentoring/css/index.css">
-    <link rel="stylesheet" type="text/css" href="/mentoring/css/designer.css">
-    <link rel="stylesheet" type="text/css" href="/mentoring/css/signup.css">
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+    <link rel="stylesheet" type="text/css" href="../css/designer.css">
+    <link rel="stylesheet" type="text/css" href="../css/signup.css">
 
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
