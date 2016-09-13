@@ -5,7 +5,7 @@
   $mid = $_SESSION['mid'];
   $writerid = $_SESSION['writerid'];
   if(!$mid||!$writerid){header('Location: feedback_error.php');}
-  include_once($'../webpage-utility/db_utility.php');
+  include_once('../webpage-utility/db_utility.php');
   $conn = connect_to_db();
 
   //Get design
@@ -91,15 +91,15 @@
 <html lang="en">
   <head>
    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    <?php include($_SERVER['DOCUMENT_ROOT'].'/mentoring/webpage-utility/ele_header.php');?>
+    <?php include($'../webpage-utility/ele_header.php');?>
    <title>Signin Page </title>
     <!-- Custom styles for this template -->
-    <link href="/mentoring/css/provider.css" rel="stylesheet">
+    <link href="../css/provider.css" rel="stylesheet">
 
   </head>
 
   <body>
-    <?php include($_SERVER['DOCUMENT_ROOT'].'/mentoring/webpage-utility/ele_nav.php');?>
+    <?php include('../webpage-utility/ele_nav.php');?>
 
       <div class="main-section" style="padding-top:50px">
         <div class="container">
