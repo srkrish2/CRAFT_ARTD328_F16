@@ -255,7 +255,8 @@ function rate(_name, number){
 		} else {
 			var multiline= $(sels[i]).val().replace(/\r?\n/g, '<br />');
 			var inputname = sels[i]['name'].replace('t', 'b')
-		 		$(inputname).val( $.trim( multiline )  );
+		 		//$(inputname).val( $.trim( multiline )  );
+		 		$(inputname).val( $(sels[i]).val() );
 		}
 	}
 
