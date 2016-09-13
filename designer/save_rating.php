@@ -70,15 +70,17 @@ foreach ($_POST as $key => $value)
 			else {$cat=2;}
 		}
 		if($cat==1){
-			echo "<script type='text/javascript'>alert('$message');</script>";
-
 			$sql="UPDATE Feedback_rating SET response=? WHERE FeedbackID=? AND RaterID=?";
 			if($stmt=mysqli_prepare($conn,$sql)){
 				mysqli_stmt_bind_param($stmt,"sii",$response,$feedbackID,$designer_id);
 				mysqli_stmt_execute($stmt);
+				$message= "Success";
+			    			echo "<script type='text/javascript'>alert('$message');</script>";
 			}
 			else {
-			    echo "Error updating record: " . mysqli_error($conn);
+			    $message= "Error updating record: " . mysqli_error($conn);
+			    			echo "<script type='text/javascript'>alert('$message');</script>";
+
 			}
 		}else if($cat==2){
 			$sql="INSERT INTO Feedback_rating (FeedbackID, RaterID, response) VALUES (?,?,?)";
@@ -87,8 +89,8 @@ foreach ($_POST as $key => $value)
 				mysqli_stmt_execute($stmt);
 			}
 			else {
-			    echo "Error updating record: " . mysqli_error($conn);
-			}
+				$message= "Error updating record: " . mysqli_error($conn);
+			    			echo "<script type='text/javascript'>alert('$message');</script>";			}
 		}
 		
 	}
