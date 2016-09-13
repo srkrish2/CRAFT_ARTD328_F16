@@ -181,7 +181,7 @@
 
     <script>
 
-    $("#email").bind("keydown", function(){
+    $("#email").bind("keydown", function() {
         $('#email-div').removeClass("has-error-text");
     }
     );
@@ -189,7 +189,7 @@
     $(document).ready(function() {
       var d = new Date();
       var start = d.getTime();
-    }
+    });
 
     function save(){
       
