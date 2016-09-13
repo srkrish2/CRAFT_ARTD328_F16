@@ -106,7 +106,7 @@ $conn = connect_to_db();
 					    	echo "<div id='div-".$value['FeedbackID']."' >";
 						   	echo "<tr>";
 
-						   	  $sql="SELECT * FROM Feedback_Rating WHERE FeedbackID=? AND RaterID=?";
+						   	  $sql="SELECT * FROM Feedback_rating WHERE FeedbackID=? AND RaterID=?";
 							  if($stmt=mysqli_prepare($conn,$sql))
 							  {
 							    mysqli_stmt_bind_param($stmt,"ii",$value['FeedbackID'],$designer_id);
