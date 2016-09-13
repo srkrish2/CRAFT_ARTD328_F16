@@ -74,7 +74,7 @@ foreach ($_POST as $key => $value)
 			if($stmt=mysqli_prepare($conn,$sql)){
 				mysqli_stmt_bind_param($stmt,"sii",$response,$feedbackID,$designer_id);
 				mysqli_stmt_execute($stmt);
-				$message= "Success";
+				$message= $designer_id." ".$feedbackID;
 			    			echo "<script type='text/javascript'>alert('$message');</script>";
 			}
 			else {
