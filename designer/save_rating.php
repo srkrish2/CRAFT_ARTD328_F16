@@ -88,7 +88,7 @@ foreach ($_POST as $key => $value)
 	}
 	else // perceived quality
 	{
-   		$feedbackID = substr($key);
+   		$feedbackID = substr($key,0);
    		$quality = htmlspecialchars($value);
    		$sql="SELECT * FROM Feedback_rating WHERE FeedbackID=? AND RaterID=?";
 							  if($stmt=mysqli_prepare($conn,$sql))
