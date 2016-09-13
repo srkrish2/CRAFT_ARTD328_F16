@@ -29,6 +29,7 @@
     $description=preg_replace('#&lt;(/?(?:br /))&gt;#', '<\1>', $description);
     
     $filename=$designs['file'];
+    echo "<script type='text/javascript'>alert(".$filename.");</script>";
   }
 
 ?>
