@@ -5,7 +5,7 @@
   $mid = $_SESSION['mid'];
   $writerid = $_SESSION['writerid'];
   if(!$mid||!$writerid){header('Location: feedback_error.php');}
- include_once($_SERVER['DOCUMENT_ROOT'].'/mentoring/webpage-utility/db_utility.php');
+ include_once('../webpage-utility/db_utility.php');
  $conn = connect_to_db();
 
  $fbktext=$_POST['_fbk-text'];

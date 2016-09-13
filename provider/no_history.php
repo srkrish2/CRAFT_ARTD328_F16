@@ -126,7 +126,6 @@
     $(document).ready(function() {
       var d = new Date();
       start = d.getTime();
-      alert(start);
     });
 
     function save(){
@@ -142,7 +141,6 @@
            $('#email-div').addClass("has-error-text");
            isOkay = false;
           }
-alert("submitting");
         var multiline= $('#fbk-text').val().replace(/\r?\n/g, '<br />');
         $('#fbk-text').val( $.trim( multiline ));
 
@@ -152,7 +150,6 @@ alert("submitting");
            errorMsg += 'Please provide feedback on the design. ';
            isOkay = false;
         }
-alert("submitting");
         if(isOkay==true){
 
           $("#feedback_form [name=_fbk-text]").val( $("#fbk-text").val() );
@@ -161,7 +158,6 @@ alert("submitting");
           var end = d.getTime();
           var timespent = end - start;
           document.getElementById('timespent').value = timespent;
-          alert("submitting");
           $("#feedback_form").submit();
             
         }else
