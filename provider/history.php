@@ -85,7 +85,7 @@
     mysqli_stmt_close($stmt); 
   }
 
-  echo $design_id;
+  echo $title;
 
 ?>
 
