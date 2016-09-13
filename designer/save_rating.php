@@ -81,8 +81,6 @@ foreach ($_POST as $key => $value)
 			    echo "Error updating record: " . mysqli_error($conn);
 			}
 		}else if($cat==2){
-			echo "<script type='text/javascript'>alert('$message');</script>";
-
 			$sql="INSERT INTO Feedback_rating (FeedbackID, RaterID, response) VALUES (?,?,?)";
 			if($stmt=mysqli_prepare($conn,$sql)){
 				mysqli_stmt_bind_param($stmt,"iis",$feedbackID, $designer_id, $text);
