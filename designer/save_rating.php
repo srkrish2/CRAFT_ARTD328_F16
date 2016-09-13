@@ -53,7 +53,7 @@ foreach ($_POST as $key => $value)
 	
     else if (strpos($key,'b') !== false) {// response
     	$message = "wrong answer";
-    	echo "<script type='text/javascript'>alert('$message');</script>";
+   // 	echo "<script type='text/javascript'>alert('$message');</script>";
    		$feedbackID = substr($key,1);
    		$text = mysqli_real_escape_string($conn, $value);
    		$sql="SELECT * FROM Feedback_rating WHERE FeedbackID=? AND RaterID=?";
@@ -74,12 +74,12 @@ foreach ($_POST as $key => $value)
 			if($stmt=mysqli_prepare($conn,$sql)){
 				mysqli_stmt_bind_param($stmt,"sii",$response,$feedbackID,$designer_id);
 				mysqli_stmt_execute($stmt);
-				$message= $designer_id." ".$feedbackID;
-			    			echo "<script type='text/javascript'>alert('$message');</script>";
+				// $message= $designer_id." ".$feedbackID;
+			 //    			echo "<script type='text/javascript'>alert('$message');</script>";
 			}
 			else {
-			    $message= "Error updating record: " . mysqli_error($conn);
-			    			echo "<script type='text/javascript'>alert('$message');</script>";
+			    // $message= "Error updating record: " . mysqli_error($conn);
+			    // 			echo "<script type='text/javascript'>alert('$message');</script>";
 
 			}
 		}else if($cat==2){
@@ -89,8 +89,8 @@ foreach ($_POST as $key => $value)
 				mysqli_stmt_execute($stmt);
 			}
 			else {
-				$message= "Error updating record: " . mysqli_error($conn);
-			    			echo "<script type='text/javascript'>alert('$message');</script>";			}
+				// $message= "Error updating record: " . mysqli_error($conn);
+			 //    			echo "<script type='text/javascript'>alert('$message');</script>";			}
 		}
 		
 	}
