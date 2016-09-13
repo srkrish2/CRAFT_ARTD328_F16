@@ -100,7 +100,7 @@
           </div>
 
             <div style="text-align:center;margin-top:20px;">
-            <button type="submit" class="btn-submit" id="submit-bn" onclick="submit();">Submit</button> 
+            <button type="submit" class="btn-submit" id="submit" onclick="submit();">Submit</button> 
             </div>
             
             <form class="hidden" action="post_survey.php?mid=<?php echo $mid;?>&writerid=<?php echo $writerid;?>" method="post" id="feedback_form" name="feedback_form">
