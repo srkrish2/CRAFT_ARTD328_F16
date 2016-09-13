@@ -50,9 +50,9 @@ $isOkay=true;
 	if($_POST['update_file']=="true"){
 		if(!$_FILES['fileToUpload']['size'] == 0 && $_FILES['fileToUpload']['error'] == 0)
 		{ 
+			echo "here";
 			$target_dir = "../designs/";
-			$_upload_file = basename($_FILES["fileToUpload"]["name"]);
-			$upload_file = (strlen($_upload_file) > 12) ? substr($_upload_file,0,4) : $_upload_file;
+			$_upload_file = basename($_FILES["fileToUpload"]["tmp_name"]);
 			$imageFileType = pathinfo($_upload_file,PATHINFO_EXTENSION);
 			$target_file="t".$team_id."_s".$_stage."_d".$design_id.".".$imageFileType;
 			$newFilePath= $target_dir.$target_file;
@@ -63,7 +63,7 @@ $isOkay=true;
 			    unlink($newFilePath); //remove the file
 			}
 
-		    if (move_uploaded_file($_FILES["fileToUpload"]["name"], $newFilePath)) {
+		    if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $newFilePath)) {
 		    	echo $newFilePath;
 		    	$sql="UPDATE Designs SET file=? WHERE DesignID = ? ";
 				if($stmt=mysqli_prepare($conn,$sql))
@@ -78,6 +78,7 @@ $isOkay=true;
 			        echo "Sorry, there was an error uploading your file.";
 		    	}
 			}
+			echo "here2";
 		}
 	}
 
