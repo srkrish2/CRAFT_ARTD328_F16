@@ -107,7 +107,7 @@ foreach ($_POST as $key => $value)
 		if($cat==1){
 			$sql="UPDATE Feedback_rating SET rating=? WHERE FeedbackID=?";
 			if($stmt=mysqli_prepare($conn,$sql)){
-				mysqli_stmt_bind_param($stmt,"i",$quality,$feedbackID);
+				mysqli_stmt_bind_param($stmt,"ii",$quality,$feedbackID);
 				mysqli_stmt_execute($stmt);
 			}
 			else {
