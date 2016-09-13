@@ -185,7 +185,7 @@ $conn = connect_to_db();
 						 echo " </tbody></table>";
 						 echo "</form>";
 						 	echo "<div style='text-align:center;margin-top:20px;margin-bottom:20px'>";
-							 echo "<button type='submit' class='btn-submit' id='submit-bn' onclick='submit();''>Submit</button> ";
+							 echo "<button type='submit' class='btn-submit' id='submit' onclick='submit();'>Submit</button> ";
 							echo "</div>";
 					}
 					else

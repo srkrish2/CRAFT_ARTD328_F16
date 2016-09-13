@@ -59,6 +59,7 @@
    <title>Signin Page </title>
     <!-- Custom styles for this template -->
     <link href="../css/designer.css" rel="stylesheet">
+    <link href="../css/index.css" rel="stylesheet">
   </head>
 
   <body>
