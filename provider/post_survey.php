@@ -11,6 +11,23 @@
  $fbktext=$_POST['_fbk-text'];
  $email=$_POST['_email'];
  $timespent=$_POST['timespent'];
+ $start_time=0;
+
+ //************ Find Design ID
+$designidsql = "SELECT * From Designs Where mid=?";
+ if($stmt=mysqli_prepare($conn,$designidsql))
+  {
+    mysqli_stmt_bind_param($stmt,"s",$mid);
+    mysqli_stmt_execute($stmt);
+    $result = $stmt->get_result();
+    $design=$result->fetch_assoc() ; 
+    $designid = $design['DesignID'];
+    $version = $design['stage'];     
+    mysqli_stmt_close($stmt); 
+  }
+  else{
+    $isOkay = false;
+  }
 
  //************ Find out if writer is random or peer mentor
 $insertsql = "SELECT * FROM `u_Designer` WHERE DesignerID=?";

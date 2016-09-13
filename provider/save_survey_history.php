@@ -82,10 +82,10 @@ $insertsql = "INSERT INTO `Survey1`(`WriterID`,`t_design`, `t_history`, `t_write
   }
 
 if($isOkay){
-	$msg = "Thank you for your feedback!"
+	$msg = "Thank you for your feedback!";
 }
 else{
-	$msg = "Sorry, something went wrong!"
+	$msg = "Sorry, something went wrong!";
 }
 
 ?>
