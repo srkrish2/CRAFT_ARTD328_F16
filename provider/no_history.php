@@ -72,7 +72,6 @@
              <div class="img-div" onmouseover="" style="cursor: pointer;" >
              <img width="auto" height="200px" src=<?php echo "'".$filename."'"; ?> onClick="view(this);" >
              <p><em style="color:grey">* Click on the image to enlarge </em></p>
-             <?php echo "<script type='text/javascript'>alert(".$filename.");</script>"; ?>
             </div>
             <div style="margin-right:30px;">
               <h3><?php echo htmlspecialchars($title)?></h3>
