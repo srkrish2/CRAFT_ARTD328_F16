@@ -11,6 +11,7 @@
  $fbktext=$_POST['_fbk-text'];
  $email=$_POST['_email'];
  $timespent=$_POST['timespent'];
+  $start_time=0;
 
  $fbktext= mysqli_real_escape_string($conn, nl2br( $_POST['fbktext'] ));
 $email=mysqli_real_escape_string($conn, nl2br($_POST['email']));
@@ -54,9 +55,7 @@ $insertsql = "INSERT INTO `Feedback`(`WriterID`, `DesignID`, `version`, `content
     mysqli_stmt_execute($stmt);   
     mysqli_stmt_close($stmt); 
   }
-  else{
-    $isOkay = false;
-  }
+  
   
  ?>
 

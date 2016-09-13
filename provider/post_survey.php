@@ -13,6 +13,9 @@
  $timespent=$_POST['timespent'];
  $start_time=0;
 
+  $fbktext= mysqli_real_escape_string($conn, nl2br( $_POST['fbktext'] ));
+$email=mysqli_real_escape_string($conn, nl2br($_POST['email']));
+
  //************ Find Design ID
 $designidsql = "SELECT * From Designs Where mid=?";
  if($stmt=mysqli_prepare($conn,$designidsql))
@@ -68,8 +71,8 @@ $insertsql = "INSERT INTO `Feedback`(`WriterID`, `DesignID`, `version`, `content
     <link rel="icon" href="logo.png">
  <script src="js/jquery-1.11.3.min.js"></script>
     <!-- Bootstrap core CSS and js -->
-    <link rel="stylesheet" type="text/css" href="dist/css/bootstrap.min.css">
-    <script type="text/javascript" src="dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../dist/css/bootstrap.min.css">
+    <script type="text/javascript" src="../dist/js/bootstrap.min.js"></script>
 
     <!-- JQuery and Google font -->
     <link href='https://fonts.googleapis.com/css?family=Exo:100,400' rel='stylesheet' type='text/css'>
