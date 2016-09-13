@@ -23,7 +23,7 @@ $conn = connect_to_db();
     mysqli_stmt_bind_param($stmt,"i",$design_id);
     mysqli_stmt_execute($stmt);
     $result = $stmt->get_result();
-	$design_information = $result->fetch_assoc());
+	$design_information = $result->fetch_assoc();
 		$title=htmlspecialchars($design_information['title']);
 		$title=preg_replace('#&lt;(/?(?:br /))&gt;#', '<\1>', $title); 	
 
