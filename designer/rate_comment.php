@@ -125,7 +125,7 @@ $conn = connect_to_db();
 						//content
 				       		echo 
 				       		"<td rowspan='2'><strong>#".$count_feedback."</strong></td>
-				       		<td rowspan='2' width='60%' style='text-align: justify; padding-bottom:10px; padding-right:25px;' class='table-text'>
+				       		<td width='60%' style='text-align: justify; padding-bottom:10px; padding-right:25px;' class='table-text'>
 				       			<p><strong>Content</strong></p>
 				       			<p>".$content."</p>
 				       		</td>	
@@ -171,13 +171,10 @@ $conn = connect_to_db();
 						</tr>
 						<tr>
 							<td colspan='3' style='border-top:none;'>
-								<p><strong>Your Response: </strong></p>";
-									if($response==""){
-										echo "<textarea id='b".$value['FeedbackID']."' name='b".$value['FeedbackID']."' rows='3' width='100%' />";
-									} else {
-										echo "<p>.".$response."</p>";
-									}
-							echo "</td>
+								<p><strong>Your Response: </strong></p>
+								<textarea id='b".$value['FeedbackID']."' name='b".$value['FeedbackID']."' rows='3' width='100%' value=".$response."/>
+
+								</td>
 						</tr>
 						</div>
 						";
