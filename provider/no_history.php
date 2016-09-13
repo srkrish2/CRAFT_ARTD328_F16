@@ -124,7 +124,8 @@
     );
 
     $(document).ready(function() {
-      start = Date.getTime();
+      var d = new Date();
+      start = d.getTime();
       alert(start);
     });
 
@@ -156,7 +157,8 @@ alert("submitting");
 
           $("#feedback_form [name=_fbk-text]").val( $("#fbk-text").val() );
           $("#feedback_form [name=_email]").val( $("#email").val() );
-          var end = Date.getTime();
+          var d = new Date();
+          var end = d.getTime();
           var timespent = end - start;
           document.getElementById('timespent').value = timespent;
           alert("submitting");
