@@ -55,9 +55,37 @@ $isOkay=true;
 			$imageFileType = pathinfo($_upload_file,PATHINFO_EXTENSION);
 			$name = $_FILES["file"]["name"];
 			$ext = end((explode(".", $name)));
-			$target_file="t".$team_id."_s".$_stage."_d".$design_id.".".$imageFileType;
+			
+			$trytype ="";
+
+			$ftype = $('#fileToUpload')[0].files[0].type;
+			switch($ftype)
+				        {
+				        	case 'application/pdf':
+				        		$trytype = "pdf";
+				        		break;
+				            case 'image/png':
+				            	$trytype = "png";
+				        		break;
+				            case 'image/gif':
+				            	$trytype = "gif";
+				        		break;
+				            case 'image/jpeg':
+				            	$trytype = "jpeg";
+				        		break;
+				            case 'image/jpg':
+				            	$trytype = "jpg";
+				        		break;
+				            case 'image/pjpeg':
+				            	$trytype = "pjpeg";
+				        		break;
+				            default:
+				                break;
+				        }
+
+			$target_file="t".$team_id."_s".$_stage."_d".$design_id.".".$trytype;
 			$newFilePath= $target_dir.$target_file;
-			echo '<script type="text/javascript">alert("' . $_upload_file . '"); </script>';
+			echo '<script type="text/javascript">alert("' . $newFilePath . '"); </script>';
 
 			if(file_exists($newFilePath)) {
 			   // echo "delete first";
