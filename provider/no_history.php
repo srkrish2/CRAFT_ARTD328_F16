@@ -30,7 +30,7 @@
     
     $filename=$designs['file'];
 
-    echo "<script type='text/javascript'>alert('".count($designs)."');</script>";
+    //echo "<script type='text/javascript'>alert('".count($designs)."');</script>";
   }
 
 ?>
@@ -69,7 +69,7 @@
           <!--Design -->      
           <div class="row">       
              <div class="img-div" onmouseover="" style="cursor: pointer;" >
-             <img width="auto" height="200px" src=<?php echo $filename; ?> onClick="view(this);" >
+             <img width="auto" height="400px" src=<?php echo $filename; ?> onClick="view(this);" >
              <p><em style="color:grey">* Click on the image to enlarge </em></p>
             </div>
             <div style="margin-right:30px;">
