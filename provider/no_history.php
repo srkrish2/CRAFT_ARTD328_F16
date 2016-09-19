@@ -8,7 +8,7 @@
   include_once('../webpage-utility/db_utility.php');
   $conn = connect_to_db();
 
-  echo "<script type='text/javascript'>alert('".$mid."'');</script>";
+  echo "<script type='text/javascript'>alert('".$mid."');</script>";
 
   //Get design
   $sql="SELECT * FROM Designs WHERE mid=?";
