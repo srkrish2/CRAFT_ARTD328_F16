@@ -58,7 +58,7 @@ $isOkay=true;
 			
 			$trytype ="";
 
-			$ftype = $('#fileToUpload')[0].files[0].type;
+			$ftype = $_FILES['fileToUpload']["type"]);
 			switch($ftype)
 				        {
 				        	case 'application/pdf':
