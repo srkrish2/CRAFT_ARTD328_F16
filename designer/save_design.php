@@ -57,7 +57,7 @@ $isOkay=true;
 			$ext = end((explode(".", $name)));
 			$target_file="t".$team_id."_s".$_stage."_d".$design_id.".".$imageFileType;
 			$newFilePath= $target_dir.$target_file;
-			echo '<script type="text/javascript">alert("' . $imageFileType . '"); </script>';
+			echo '<script type="text/javascript">alert("' . $_FILES["fileToUpload"]["tmp_name"] . '"); </script>';
 
 			if(file_exists($newFilePath)) {
 			   // echo "delete first";
