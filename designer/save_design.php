@@ -85,7 +85,6 @@ $isOkay=true;
 
 			$target_file="t".$team_id."_s".$_stage."_d".$design_id.".".$trytype;
 			$newFilePath= $target_dir.$target_file;
-			echo '<script type="text/javascript">alert("' . $newFilePath . '"); </script>';
 
 			if(file_exists($newFilePath)) {
 			   // echo "delete first";
