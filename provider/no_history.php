@@ -30,7 +30,7 @@
     
     $filename=$designs['file'];
 
-    echo "<script type='text/javascript'>alert('".$filename."');</script>";
+    echo "<script type='text/javascript'>alert('".count($designs)."');</script>";
   }
 
 ?>
