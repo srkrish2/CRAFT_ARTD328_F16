@@ -8,8 +8,6 @@
   include_once('../webpage-utility/db_utility.php');
   $conn = connect_to_db();
 
-  echo "<script type='text/javascript'>alert('".$mid."');</script>";
-
   //Get design
   $sql="SELECT * FROM Designs WHERE mid=?";
   if($stmt=mysqli_prepare($conn,$sql))
@@ -31,6 +29,8 @@
     $description=preg_replace('#&lt;(/?(?:br /))&gt;#', '<\1>', $description);
     
     $filename=$designs['file'];
+
+    echo "<script type='text/javascript'>alert('".$filename."');</script>";
   }
 
 ?>
