@@ -1,9 +1,9 @@
 <?php
   session_start();
-  $_SESSION['mid']=$_GET['mid'];
-  $_SESSION['writerid']=$_GET['writerid'];
-  $mid = $_SESSION['mid'];
-  $writerid = $_SESSION['writerid'];
+  // $_SESSION['mid']=$_GET['mid'];
+  // $_SESSION['writerid']=$_GET['writerid'];
+  $mid = $_GET['mid'];
+  $writerid = $_GET['writerid'];
   if(!$mid||!$writerid){header('Location: feedback_error.php');}
   include_once('../webpage-utility/db_utility.php');
   $conn = connect_to_db();
