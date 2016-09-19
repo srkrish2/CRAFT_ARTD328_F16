@@ -12,7 +12,7 @@
   $sql="SELECT * FROM Designs WHERE mid=? ";
   if($stmt=mysqli_prepare($conn,$sql))
   {
-    mysqli_stmt_bind_param($stmt,"i",$mid);
+    mysqli_stmt_bind_param($stmt,"s",$mid);
     mysqli_stmt_execute($stmt);
     $result = $stmt->get_result();
     $designs=$result->fetch_assoc() ;      
