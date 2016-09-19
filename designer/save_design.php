@@ -53,7 +53,9 @@ $isOkay=true;
 			$target_dir = "../designs/";
 			$_upload_file = basename($_FILES["fileToUpload"]["tmp_name"]);
 			$imageFileType = pathinfo($_upload_file,PATHINFO_EXTENSION);
-			$target_file="t".$team_id."_s".$_stage."_d".$design_id.".".$imageFileType;
+			$name = $_FILES["file"]["name"];
+			$ext = end((explode(".", $name)));
+			$target_file="t".$team_id."_s".$_stage."_d".$design_id.".".$ext;
 			$newFilePath= $target_dir.$target_file;
 
 			if(file_exists($newFilePath)) {
