@@ -159,7 +159,7 @@
 		        	 //Check Type
 				       switch(ftype)
 				        {
-				        	case 'image/pdf':
+				        	case 'application/pdf':
 				            case 'image/png':
 				            case 'image/gif':
 				            case 'image/jpeg':
