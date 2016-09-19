@@ -9,7 +9,7 @@
   $conn = connect_to_db();
 
   //Get design
-  $sql="SELECT * FROM Designs WHERE mid=?";
+  $sql="SELECT * FROM Designs WHERE mid=? ";
   if($stmt=mysqli_prepare($conn,$sql))
   {
     mysqli_stmt_bind_param($stmt,"i",$mid);
