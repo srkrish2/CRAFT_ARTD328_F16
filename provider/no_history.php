@@ -168,7 +168,6 @@
     }
     
       function view(imgsrc) {
-        addlabel("click-image");  
             viewwin = window.open(imgsrc.src,'viewwin', 'width=800,height=400px'); 
           }
 
