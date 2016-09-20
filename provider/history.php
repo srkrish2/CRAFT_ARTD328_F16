@@ -12,7 +12,7 @@
   $sql="SELECT * FROM Designs WHERE mid=?";
   if($stmt=mysqli_prepare($conn,$sql))
   {
-    mysqli_stmt_bind_param($stmt,"i",$mid);
+    mysqli_stmt_bind_param($stmt,"s",$mid);
     mysqli_stmt_execute($stmt);
     $result = $stmt->get_result();
     $designs=$result->fetch_assoc() ;      
@@ -123,7 +123,7 @@
           <div class="row"> 
               <div class="col">      
                <div class="img-div" onmouseover="" style="cursor: pointer;" >
-               <img width="auto" height="200px" src=<?php echo $p_filename; ?> onClick="view(this);" >
+               <img width="auto" height="400px" src=<?php echo $p_filename; ?> onClick="view(this);" >
                <p><em style="color:grey">* Click on the image to enlarge </em></p>
                 </div>
               </div>
@@ -139,7 +139,7 @@
           <h3>Current Iteration</h3>      
           <div class="row">       
              <div class="img-div" onmouseover="" style="cursor: pointer;" >
-             <img width="auto" height="200px" src=<?php echo $filename; ?> onClick="view(this);" >
+             <img width="auto" height="400px" src=<?php echo $filename; ?> onClick="view(this);" >
              <p><em style="color:grey">* Click on the image to enlarge </em></p>
             </div>
             <div style="margin-right:30px;">

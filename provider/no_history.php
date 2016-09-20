@@ -67,9 +67,9 @@
           </div>
 
           <!--Design -->      
-          <div class="row">       
+          <div class="row" style="padding-top:50px;">       
              <div class="img-div" onmouseover="" style="cursor: pointer;" >
-             <img width="auto" height="400px" src=<?php echo $filename; ?> onClick="view(this);" >
+             <img width="auto" height="500px" src=<?php echo $filename; ?> onClick="view(this);" >
              <p><em style="color:grey">* Click on the image to enlarge </em></p>
             </div>
             <div style="margin-right:30px;">
