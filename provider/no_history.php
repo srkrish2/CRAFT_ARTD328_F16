@@ -23,10 +23,12 @@
     $title=$designs['title'];
     $title=htmlspecialchars($designs['title']);
     $title=preg_replace('#&lt;(/?(?:br /))&gt;#', '<\1>', $title);
+    $title=str_replace(array("'", "\"", "&quot;"), "", $title);
 
     $stage=$row['stage'];
     $description=htmlspecialchars($designs['description']);
     $description=preg_replace('#&lt;(/?(?:br /))&gt;#', '<\1>', $description);
+    $description=str_replace(array("'", "\"", "&quot;"), "", $description);
     
     $filename=$designs['file'];
 
