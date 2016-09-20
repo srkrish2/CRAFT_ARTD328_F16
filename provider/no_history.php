@@ -28,7 +28,7 @@
     $stage=$row['stage'];
     $description=htmlspecialchars($designs['description']);
     $description=preg_replace('#&lt;(/?(?:br /))&gt;#', '<\1>', $description);
-    $description=str_replace(array("'", "\"", "&quot;"), "", $description);
+    $description=str_replace(array("'", "\&quot;"), "", $description);
     
     $filename=$designs['file'];
 
