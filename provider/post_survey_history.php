@@ -205,7 +205,7 @@ $insertsql = "INSERT INTO `Feedback`(`WriterID`, `DesignID`, `version`, `content
                 </thead>
                 <div >
                   <tr class="form-group required" id="form-group-d1">
-                    <th scope='row' style='width:40%' class="radio-label" ><label class="control-label" for='d1'>I was given the all of information needed to effectively review the design</label></td>
+                    <th scope='row' style='width:40%' class="radio-label" ><label class="control-label" for='d1'>I was given all of the information needed to effectively review the design</label></td>
                     <td style='width:8%' align="center" class="radio-cell"><input type="radio" class="radio-inline" name="d1" id="d1" value="1"></td>
                     <td style='width:8%' align="center" class="radio-cell"><input type="radio" class="radio-inline" name="d1" id="d1" value="2"></td>
                     <td style='width:8%' align="center" class="radio-cell"><input type="radio" class="radio-inline" name="d1" id="d1" value="3"></td>

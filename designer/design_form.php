@@ -78,16 +78,16 @@
 				  	<label for="stage" class="col-sm-2 control-label">Stage<em>*</em></label>
 					<div class="col-sm-10">
 						<label class="radio-inline">
-						  <input type="radio" name="stage" id="stage1" value="1" <?php if($type==1) echo "checked";?>> Concepts
+						  <input type="radio" name="stage" id="stage1" value="1" <?php if($type==1) echo "checked";?>> Week 5: Concepts
 						</label>
 						<label class="radio-inline">
-						  <input type="radio" name="stage" id="stage2" value="2" <?php if($type==2) echo "checked";?>> Initial Design
+						  <input type="radio" name="stage" id="stage2" value="2" <?php if($type==2) echo "checked";?>> Week 8: Initial Design
 						</label>
 						<label class="radio-inline">
-						  <input type="radio" name="stage" id="stage3" value="3" <?php if($type==3) echo "checked";?>> Revised Design
+						  <input type="radio" name="stage" id="stage3" value="3" <?php if($type==3) echo "checked";?>> Week 11: Revised Design
 						</label>
 						<label class="radio-inline">
-						  <input type="radio" name="stage" id="stage3" value="4" <?php if($type==4) echo "checked";?>> Final Design
+						  <input type="radio" name="stage" id="stage3" value="4" <?php if($type==4) echo "checked";?>> Week 13: Final Design
 						</label>
 				    </div>
 				</div>
