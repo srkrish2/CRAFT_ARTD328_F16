@@ -53,15 +53,13 @@ $insertsql = "SELECT * FROM `Feedback` WHERE `WriterID` = ? AND `DesignID` = ? A
     echo "here";
     mysqli_stmt_bind_param($stmt,"iii",$writerid, $designid, $version);
     mysqli_stmt_execute($stmt);   
-    $result = $stmt->store_result();
-    //$result=$result->fetch_assoc() ; 
-    echo $result->num_rows;
+    $result=$result->fetch_assoc() ; 
     mysqli_stmt_close($stmt); 
   }
   else{ echo "error"; }
 
 //************ if feedback not present Save Feedback
-if(mysqli_fetch_array($result)==false){
+if(!count($result)){
 $insertsql = "INSERT INTO `Feedback`(`WriterID`, `DesignID`, `version`, `content`, `start_time`, `end_time`, `mentor`, `next_time`) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
  if($stmt=mysqli_prepare($conn,$insertsql))
   {
