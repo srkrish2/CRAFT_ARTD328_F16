@@ -12,6 +12,7 @@
  $email=$_POST['_email'];
  $timespent=$_POST['timespent'];
  $nexttime=$_POST['nexttime'];
+  $behavior=$_POST['behavior'];
   $start_time=0;
 
 
@@ -59,10 +60,10 @@ $insertsql = "SELECT FROM `Feedback` WHERE `WriterID` = ? AND `DesignID` = ? AND
 
 //************ if feedback not present Save Feedback
 if(count($result)>0){
-$insertsql = "INSERT INTO `Feedback`(`WriterID`, `DesignID`, `version`, `content`, `start_time`, `end_time`, `mentor`, `next_time`) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+$insertsql = "INSERT INTO `Feedback`(`WriterID`, `DesignID`, `version`, `content`, `start_time`, `end_time`, `mentor`, `next_time`, `behavior`) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
  if($stmt=mysqli_prepare($conn,$insertsql))
   {
-    mysqli_stmt_bind_param($stmt,"iiisiiii",$writerid, $designid, $version, $fbktext, $start_time, $timespent, $mentor, $nexttime);
+    mysqli_stmt_bind_param($stmt,"iiisiiiis",$writerid, $designid, $version, $fbktext, $start_time, $timespent, $mentor, $nexttime, $behavior);
     mysqli_stmt_execute($stmt);   
     mysqli_stmt_close($stmt); 
   }

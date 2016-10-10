@@ -173,6 +173,7 @@
                 <input name="_email"/>
                 <input type="hidden" id='timespent' name="timespent" value="" />
                 <input type="hidden" id='nexttime' name="nexttime" value="" />
+                <input type="hidden" id='behavior' name="behavior" value="" />
 
               </form>
 
@@ -199,14 +200,25 @@
 
     <script>
 
+    var behavior;
+
     $("#email").bind("keydown", function() {
         $('#email-div').removeClass("has-error-text");
     }
     );
 
+    document.getElementById("fbk-text").onkeypress = function() {myFunction()};
+
+    function myFunction() {
+      t = d.getTime();
+      time = t-start;
+        behavior.push("keypress:"+t);
+    }
+
     $(document).ready(function() {
       var d = new Date();
        start = d.getTime();
+       behavior = new Array();
     });
 
     function nnext(){
@@ -223,6 +235,7 @@
       var d = new Date();
       next = d.getTime();
       nexttime = next-start;
+      behavior.push("next:"+nexttime);
     }
 
     function back(){
@@ -235,8 +248,9 @@
       var prev = document.getElementById("prev");
       prev.style.display = "inline" ;
       var d = new Date();
-      next = d.getTime();
-      nexttime = next-start;
+      backt = d.getTime();
+      backtime = backt-start;
+      behavior.push("back:"+backtime);
     }
 
     function save(){
@@ -271,6 +285,7 @@
           var timespent = end - nexttime;
           document.getElementById('timespent').value = timespent;
           document.getElementById('nexttime').value = nexttime;
+          document.getElementById('behavior').value = behavior.toString();
           $("#feedback_form").submit();
             
         }else
