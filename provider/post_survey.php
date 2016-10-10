@@ -52,9 +52,9 @@ $insertsql = "SELECT FROM `Feedback` WHERE `WriterID` = ? AND `DesignID` = ? AND
   {
     mysqli_stmt_bind_param($stmt,"iii",$writerid, $designid, $version);
     mysqli_stmt_execute($stmt);   
-    $result = $stmt->get_result();
-    $result=$result->fetch_assoc() ; 
-    echo mysqli_fetch_array($result);
+    $result = $stmt->store_result();
+    //$result=$result->fetch_assoc() ; 
+    echo $result->num_rows;
     mysqli_stmt_close($stmt); 
   }
 
