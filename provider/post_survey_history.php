@@ -45,7 +45,6 @@ $insertsql = "SELECT * FROM `u_Designer` WHERE DesignerID=?";
   else{
     $isOkay = false;
   }
-echo "here";
 //************ Is feedback already there from this designer?
 $insertsql = "SELECT FROM `Feedback` WHERE `WriterID` = ? AND `DesignID` = ? AND version=?";
  if($stmt=mysqli_prepare($conn,$insertsql))
@@ -56,7 +55,7 @@ $insertsql = "SELECT FROM `Feedback` WHERE `WriterID` = ? AND `DesignID` = ? AND
     $result=$result->fetch_assoc() ; 
     mysqli_stmt_close($stmt); 
   }
-echo count($result);
+echo ;
 //************ if feedback not present Save Feedback
 if(!count($result)){
 $insertsql = "INSERT INTO `Feedback`(`WriterID`, `DesignID`, `version`, `content`, `start_time`, `end_time`, `mentor`, `next_time`, `behavior`) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
