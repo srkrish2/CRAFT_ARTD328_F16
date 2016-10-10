@@ -13,6 +13,7 @@
  $timespent=$_POST['timespent'];
  $nexttime=$_POST['nexttime'];
   $behavior=$_POST['behavior'];
+  echo $behavior;
   $start_time=0;
 
   //************ Find Design ID
