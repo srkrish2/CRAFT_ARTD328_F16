@@ -50,6 +50,7 @@ $insertsql = "SELECT * FROM `u_Designer` WHERE DesignerID=?";
 $insertsql = "SELECT FROM `Feedback` WHERE `WriterID` = ? AND `DesignID` = ? AND version=?";
  if($stmt=mysqli_prepare($conn,$insertsql))
   {
+    echo "here";
     mysqli_stmt_bind_param($stmt,"iii",$writerid, $designid, $version);
     mysqli_stmt_execute($stmt);   
     $result = $stmt->store_result();
