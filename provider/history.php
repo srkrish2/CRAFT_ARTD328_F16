@@ -120,6 +120,7 @@
           </div>
 
           <!--Previous Design -->  
+          <div id = "prev" name="prev" style="display:inline;">   
           <h3>Previous Iteration</h3>    
           <div class="row" id='prevrow'> 
               <div class="col">      
@@ -139,6 +140,7 @@
           <div style="text-align:center;margin-top:20px;">
             <button type="submit" class="btn-submit" id="submit-bn" onclick="next();">Next</button> 
             </div>
+          </div>
 
 
           <!--Design -->
@@ -162,18 +164,6 @@
             </div>
             
 
-            <!--Feedback -->
-            <div class="sub_frame required" id="fbk-div">       
-              <h4 class="question-text"><strong>Please provide feedback (in English) for how to improve the design &nbsp</strong><em style="color:red;"> (required)</em></h4>
-                  
-              <textarea id="fbk-text" name="fbk-text" rows="7" style="width:100%;"></textarea>  
-            </div>
-
-              <div style="text-align:center;margin-top:20px;">
-              <button type="submit" class="btn-submit" id="submit-bn" onclick="back();">Back</button> 
-              <button type="submit" class="btn-submit" id="submit-bn" onclick="save();">Submit</button> 
-              </div>
-
               
               <form class="hidden" action="post_survey_history.php?mid=<?php echo $mid;?>&writerid=<?php echo $writerid;?>" method="post" id="feedback_form" name="feedback_form">
                 <input name="_fbk-text"/>
@@ -186,6 +176,19 @@
               <div style="margin-top:25px;"></div>
 
             </div>
+
+            <!--Feedback -->
+            <div class="sub_frame required" id="fbk-div" style="display:none">       
+              <h4 class="question-text"><strong>Please provide feedback (in English) for how to improve the design &nbsp</strong><em style="color:red;"> (required)</em></h4>
+                  
+              <textarea id="fbk-text" name="fbk-text" rows="7" style="width:100%;"></textarea>  
+            </div>
+
+              <div style="text-align:center;margin-top:20px;">
+              <button type="submit" class="btn-submit" id="submit-bn" onclick="back();">Back</button> 
+              <button type="submit" class="btn-submit" id="submit-bn" onclick="save();">Submit</button> 
+              </div>
+
           </div>
       </div><!--end container-->
 
@@ -207,8 +210,10 @@
     function next(){
       var current = document.getElementById("current");
       current.style.display = "inline" ;
-      //var prev = document.getElementById("prev");
-      //current.style.display = "none" ;
+      var current = document.getElementById("fbk-div");
+      current.style.display = "inline" ;
+      var prev = document.getElementById("prev");
+      prev.style.display = "none" ;
       var d = new Date();
       next = d.getTime();
       nexttime = next-start;
@@ -217,8 +222,8 @@
     function back(){
       var current = document.getElementById("current");
       current.style.display = "none" ;
-      //var prev = document.getElementById("prev");
-      //current.style.display = "inline" ;
+      var prev = document.getElementById("prev");
+      prev.style.display = "inline" ;
       var d = new Date();
       next = d.getTime();
       nexttime = next-start;
