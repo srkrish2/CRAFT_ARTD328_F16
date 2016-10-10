@@ -152,7 +152,7 @@
               <p class="project-description" style='text-align: justify;'><?php echo $description;?> </p>
             </div>
           </div>
-          </div><!--end Design row--><!--end Design row-->
+          <!--end Design row--><!--end Design row-->
           <!--Empty field alert --> 
           <div class="alert alert-danger" role="alert" id="error_alert" style="display:none;">
             <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
