@@ -56,7 +56,7 @@ $insertsql = "SELECT FROM `Feedback` WHERE `WriterID` = ? AND `DesignID` = ? AND
     $result=$result->fetch_assoc() ; 
     mysqli_stmt_close($stmt); 
   }
-echo $result['FeedbackID'];
+echo count($result);
 //************ if feedback not present Save Feedback
 if(!count($result)){
 $insertsql = "INSERT INTO `Feedback`(`WriterID`, `DesignID`, `version`, `content`, `start_time`, `end_time`, `mentor`, `next_time`, `behavior`) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
