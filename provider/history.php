@@ -119,6 +119,7 @@
           </div>
 
           <!--Previous Design -->  
+          <div id = "prev" name="prev" style="display:none;">
           <h3>Previous Iteration</h3>    
           <div class="row"> 
               <div class="col">      
@@ -138,6 +139,8 @@
           <div style="text-align:center;margin-top:20px;">
             <button type="submit" class="btn-submit" id="submit-bn" onclick="next();">Next</button> 
             </div>
+
+          </div>
 
           <!--Design -->
           <div id = "current" name="current" style="display:none;">   
@@ -205,6 +208,8 @@
     function next(){
       var current = document.getElementById("current");
       current.style.display = "inline" ;
+      var prev = document.getElementById("prev");
+      current.style.display = "none" ;
       var d = new Date();
       next = d.getTime();
       nexttime = next-start;
@@ -213,6 +218,8 @@
     function back(){
       var current = document.getElementById("current");
       current.style.display = "none" ;
+      var prev = document.getElementById("prev");
+      current.style.display = "inline" ;
       var d = new Date();
       next = d.getTime();
       nexttime = next-start;
