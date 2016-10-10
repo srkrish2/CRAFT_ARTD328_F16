@@ -119,9 +119,9 @@
           </div>
 
           <!--Previous Design -->  
-          <div id = "prev" name="prev" style="display:inline;">
+          <div id = "prev" name="prev">
           <h3>Previous Iteration</h3>    
-          <div class="row"> 
+          <div class="row" id='prevrow'> 
               <div class="col">      
                <div class="img-div" onmouseover="" style="cursor: pointer;" >
                <img width="auto" height="400px" src=<?php echo $p_filename; ?> onClick="view(this);" >
