@@ -210,6 +210,7 @@
     document.getElementById("fbk-text").onkeypress = function() {myFunction()};
 
     function myFunction() {
+      var d = new Date();
       t = d.getTime();
       time = t-start;
         behavior.push("keypress:"+t);
