@@ -137,7 +137,7 @@
           </div><!--end Previous Design row--><!--end Design row-->
 
           <div style="text-align:center;margin-top:20px;">
-            <button type="submit" class="btn-submit" id="submit-bn" onclick="next();">Next</button> 
+            <button type="submit" class="btn-submit" id="submit-bn" onclick="nnext();">Next</button> 
             </div>
 
           </div>
@@ -205,7 +205,7 @@
        start = d.getTime();
     });
 
-    function next(){
+    function nnext(){
       var current = document.getElementById("current");
       current.style.display = "inline" ;
       var prev = document.getElementById("prev");
