@@ -15,6 +15,7 @@
   $behavior=$_POST['behavior'];
   $start_time=0;
 
+echo "here";
 
   //************ Find Design ID
 $designidsql = "SELECT * From Designs Where mid=?";
