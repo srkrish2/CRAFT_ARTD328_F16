@@ -133,7 +133,7 @@
       var d = new Date();
       t = d.getTime();
       time = t-start;
-        behavior.push("keypress:"+t);
+        behavior.push("k:"+t);
     }
 
     $(document).ready(function() {

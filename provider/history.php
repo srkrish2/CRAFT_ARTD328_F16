@@ -213,7 +213,7 @@
       var d = new Date();
       t = d.getTime();
       time = t-start;
-        behavior.push("keypress:"+t);
+        behavior.push("k:"+t);
     }
 
     $(document).ready(function() {
@@ -236,7 +236,7 @@
       var d = new Date();
       next = d.getTime();
       nexttime = next-start;
-      behavior.push("next:"+nexttime);
+      behavior.push("n:"+nexttime);
     }
 
     function back(){
@@ -251,7 +251,7 @@
       var d = new Date();
       backt = d.getTime();
       backtime = backt-start;
-      behavior.push("back:"+backtime);
+      behavior.push("b:"+backtime);
     }
 
     function save(){
