@@ -37,6 +37,7 @@
   if($stmt=mysqli_prepare($conn,$sql))
   {
     $p_stage = $stage - 1;
+    echo $p_stage;
     mysqli_stmt_bind_param($stmt,"ii",$teamID,$p_stage);
     mysqli_stmt_execute($stmt);
     $result = $stmt->get_result();
@@ -123,7 +124,7 @@
           <div class="row"> 
               <div class="col">      
                <div class="img-div" onmouseover="" style="cursor: pointer;" >
-               <img width="auto" height="400px" src='"'<?php echo $p_filename; ?>'"' onClick="view(this);" >
+               <img width="auto" height="400px" src=<?php echo $p_filename; ?> onClick="view(this);" >
                <p><em style="color:grey">* Click on the image to enlarge </em></p>
                 </div>
               </div>
@@ -140,7 +141,7 @@
             </div>
 
           <!--Design -->
-          <div id = "current" name="current" style="visibility:hidden;">   
+          <div id = "current" name="current" style="display:none;">   
           <h3>Current Iteration</h3>      
           <div class="row">       
              <div class="img-div" onmouseover="" style="cursor: pointer;" >
@@ -203,7 +204,7 @@
 
     function next(){
       var current = document.getElementById("current");
-      current.style.visibility = "visible" ;
+      current.style.display = "inline" ;
       var d = new Date();
       next = d.getTime();
       nexttime = next-start;
@@ -211,7 +212,7 @@
 
     function back(){
       var current = document.getElementById("current");
-      current.style.visibility = "hidden" ;
+      current.style.display = "none" ;
       var d = new Date();
       next = d.getTime();
       nexttime = next-start;
