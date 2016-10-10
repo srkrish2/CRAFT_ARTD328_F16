@@ -57,7 +57,7 @@ $insertsql = "SELECT FROM `Feedback` WHERE `WriterID` = ? AND `DesignID` = ? AND
 
 
 //************ if feedback not present Save Feedback
-if($result){
+if(!$result){
 $insertsql = "INSERT INTO `Feedback`(`WriterID`, `DesignID`, `version`, `content`, `start_time`, `end_time`, `mentor`, `next_time`) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
  if($stmt=mysqli_prepare($conn,$insertsql))
   {
@@ -65,9 +65,7 @@ $insertsql = "INSERT INTO `Feedback`(`WriterID`, `DesignID`, `version`, `content
     mysqli_stmt_execute($stmt);   
     mysqli_stmt_close($stmt); 
   }
-}
-
-//************ if feedback present update Feedback
+}//************ if feedback present update Feedback
 else{
 $insertsql = "UPDATE `Feedback` SET content=? WHERE (WriterID=? AND DesignID=? AND version=?)";
  if($stmt=mysqli_prepare($conn,$insertsql))

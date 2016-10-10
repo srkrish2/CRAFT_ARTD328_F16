@@ -167,6 +167,7 @@
           </div>
 
             <div style="text-align:center;margin-top:20px;">
+            <button type="submit" class="btn-submit" id="submit-bn" onclick="back();">Back</button> 
             <button type="submit" class="btn-submit" id="submit-bn" onclick="save();">Submit</button> 
             </div>
 
@@ -203,6 +204,14 @@
     function next(){
       var current = document.getElementById("current");
       current.style.visibility = "visible" ;
+      var d = new Date();
+      next = d.getTime();
+      nexttime = next-start;
+    }
+
+    function back(){
+      var current = document.getElementById("current");
+      current.style.visibility = "hidden" ;
       var d = new Date();
       next = d.getTime();
       nexttime = next-start;
