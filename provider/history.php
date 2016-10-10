@@ -137,7 +137,7 @@
             </div>
           </div><!--end Previous Design row--><!--end Design row-->
 
-          <div style="text-align:center;margin-top:20px;">
+          <div id="nextbtn" style="text-align:center;margin-top:20px;display:inline">
             <button type="submit" class="btn-submit" id="submit-bn" onclick="next();">Next</button> 
             </div>
           </div>
@@ -216,6 +216,8 @@
       current.style.display = "inline" ;
       var current = document.getElementById("buttons");
       current.style.display = "inline" ;
+      var current = document.getElementById("nextbtn");
+      current.style.display = "none" ;
       var prev = document.getElementById("prev");
       prev.style.display = "none" ;
       var d = new Date();
@@ -228,6 +230,8 @@
       current.style.display = "none" ;
       var current = document.getElementById("buttons");
       current.style.display = "none" ;
+      var current = document.getElementById("nextbtn");
+      current.style.display = "inline" ;
       var prev = document.getElementById("prev");
       prev.style.display = "inline" ;
       var d = new Date();
