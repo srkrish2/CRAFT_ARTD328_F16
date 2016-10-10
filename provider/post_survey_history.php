@@ -68,6 +68,7 @@ $insertsql = "INSERT INTO `Feedback`(`WriterID`, `DesignID`, `version`, `content
     mysqli_stmt_execute($stmt);   
     mysqli_stmt_close($stmt); 
   }
+  else{echo "error1";}
 }//************ if feedback present update Feedback
 else{
 $insertsql = "UPDATE `Feedback` SET content=? WHERE (WriterID=? AND DesignID=? AND version=?)";
