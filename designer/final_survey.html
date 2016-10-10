@@ -1,21 +1,17 @@
 <?php 
   session_start();
-  $_SESSION['mid']=$_GET['mid'];
-  $_SESSION['writerid']=$_GET['writerid'];
-  $mid = $_SESSION['mid'];
-  $writerid = $_SESSION['writerid'];
-  if(!$mid||!$writerid){header('Location: feedback_error.php');}
+  $_SESSION['did']=$_GET['did'];
+  $designer_id = $_SESSION['did'];
+  if(!$designer_id){header('Location: feedback_error.php');}
  include_once('../webpage-utility/db_utility.php');
  $conn = connect_to_db();
 
  $fbktext=$_POST['_fbk-text'];
  $email=$_POST['_email'];
  $timespent=$_POST['timespent'];
- $start_time=0;
- $nexttime = 0;
+  $start_time=0;
 
-
- //************ Find Design ID
+  //************ Find Design ID
 $designidsql = "SELECT * From Designs Where mid=?";
  if($stmt=mysqli_prepare($conn,$designidsql))
   {
@@ -46,39 +42,15 @@ $insertsql = "SELECT * FROM `u_Designer` WHERE DesignerID=?";
     $isOkay = false;
   }
 
-  //************ Is feedback already there from this designer?
-$insertsql = "SELECT FROM `Feedback` WHERE `WriterID` = ? AND `DesignID` = ? AND version=?";
+//************ Save Feedback
+$insertsql = "INSERT INTO `Feedback`(`WriterID`, `DesignID`, `version`, `content`, `start_time`, `end_time`, `mentor`) VALUES (?, ?, ?, ?, ?, ?, ?)";
  if($stmt=mysqli_prepare($conn,$insertsql))
   {
-    mysqli_stmt_bind_param($stmt,"iii",$writerid, $designid, $version);
-    mysqli_stmt_execute($stmt);   
-    $result = $stmt->get_result();
-    mysqli_stmt_close($stmt); 
-  }
-
-
-//************ if feedback not present Save Feedback
-if($result){
-$insertsql = "INSERT INTO `Feedback`(`WriterID`, `DesignID`, `version`, `content`, `start_time`, `end_time`, `mentor`, `next_time`) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
- if($stmt=mysqli_prepare($conn,$insertsql))
-  {
-    mysqli_stmt_bind_param($stmt,"iiisiii",$writerid, $designid, $version, $fbktext, $start_time, $timespent, $mentor, $nexttime);
+    mysqli_stmt_bind_param($stmt,"iiisiii",$writerid, $designid, $version, $fbktext, $start_time, $timespent, $mentor);
     mysqli_stmt_execute($stmt);   
     mysqli_stmt_close($stmt); 
   }
-}
-
-//************ if feedback present update Feedback
-else{
-$insertsql = "UPDATE `Feedback` SET content=? WHERE (WriterID=? AND DesignID=? AND version=?)";
- if($stmt=mysqli_prepare($conn,$insertsql))
-  {
-    mysqli_stmt_bind_param($stmt,"siii",$fbktext, $writerid, $designid, $version);
-    mysqli_stmt_execute($stmt);   
-    mysqli_stmt_close($stmt); 
-  }
-}
-
+  
   
  ?>
 
@@ -158,9 +130,8 @@ $insertsql = "UPDATE `Feedback` SET content=? WHERE (WriterID=? AND DesignID=? A
                   </tr>
                 </div>
                 <div >
-                  <tr style="display: none;" class="form-group required" id="form-group-e2">
-                    <th scope='row' style='width:25%'class="radio-label" ><label class="control-label" for='e2'>Evaluating the history</label></td>
-                    <td style='width:12%' align="center" class="radio-cell"><input type="radio" class="radio-inline" name="e2" id="e2" checked="checked" value="0"></td>
+                  <tr class="form-group required" id="form-group-e2">
+                    <th scope='row' style='width:25%' class="radio-label" ><label class="control-label" for='e2'>Evaluating the history</label></td>
                     <td style='width:12%' align="center" class="radio-cell"><input type="radio" class="radio-inline" name="e2" id="e2" value="1"></td>
                     <td style='width:12%' align="center" class="radio-cell"><input type="radio" class="radio-inline" name="e2" id="e2" value="2"></td>
                     <td style='width:12%' align="center" class="radio-cell"><input type="radio" class="radio-inline" name="e2" id="e2" value="3"></td>
@@ -199,9 +170,9 @@ $insertsql = "UPDATE `Feedback` SET content=? WHERE (WriterID=? AND DesignID=? A
                   </tr>
                 </div>
                 <div>
-                  <tr class="form-group required" id="form-group-t_history" style="display: none;">
+                  <tr class="form-group required" id="form-group-t_history">
                     <th scope='row' style='width:40%' class="radio-label" ><label class="control-label" for='t_history'>Evaluating the history</label></td>
-                    <td><input style='width:60%' type="text" class="text-inline" name="t_history" placeholder="ex. 10" id="t_history" value="0"></td>
+                    <td><input style='width:60%' type="text" class="text-inline" name="t_history" placeholder="ex. 10" id="t_history" value=""></td>
                   </tr>
                 </div>
                 <div>
@@ -232,7 +203,7 @@ $insertsql = "UPDATE `Feedback` SET content=? WHERE (WriterID=? AND DesignID=? A
                 </thead>
                 <div >
                   <tr class="form-group required" id="form-group-d1">
-                    <th scope='row' style='width:40%' class="radio-label" ><label class="control-label" for='d1'>I was given all of the information needed to effectively review the design</label></td>
+                    <th scope='row' style='width:40%' class="radio-label" ><label class="control-label" for='d1'>I was given the all of information needed to effectively review the design</label></td>
                     <td style='width:8%' align="center" class="radio-cell"><input type="radio" class="radio-inline" name="d1" id="d1" value="1"></td>
                     <td style='width:8%' align="center" class="radio-cell"><input type="radio" class="radio-inline" name="d1" id="d1" value="2"></td>
                     <td style='width:8%' align="center" class="radio-cell"><input type="radio" class="radio-inline" name="d1" id="d1" value="3"></td>

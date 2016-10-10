@@ -11,6 +11,7 @@
  $fbktext=$_POST['_fbk-text'];
  $email=$_POST['_email'];
  $timespent=$_POST['timespent'];
+ $nexttime=$_POST['nexttime'];
   $start_time=0;
 
   //************ Find Design ID
@@ -44,15 +45,38 @@ $insertsql = "SELECT * FROM `u_Designer` WHERE DesignerID=?";
     $isOkay = false;
   }
 
-//************ Save Feedback
-$insertsql = "INSERT INTO `Feedback`(`WriterID`, `DesignID`, `version`, `content`, `start_time`, `end_time`, `mentor`) VALUES (?, ?, ?, ?, ?, ?, ?)";
+//************ Is feedback already there from this designer?
+$insertsql = "SELECT FROM `Feedback` WHERE `WriterID` = ? AND `DesignID` = ? AND version=?";
  if($stmt=mysqli_prepare($conn,$insertsql))
   {
-    mysqli_stmt_bind_param($stmt,"iiisiii",$writerid, $designid, $version, $fbktext, $start_time, $timespent, $mentor);
+    mysqli_stmt_bind_param($stmt,"iii",$writerid, $designid, $version);
+    mysqli_stmt_execute($stmt);   
+    $result = $stmt->get_result();
+    mysqli_stmt_close($stmt); 
+  }
+
+
+//************ if feedback not present Save Feedback
+if($result){
+$insertsql = "INSERT INTO `Feedback`(`WriterID`, `DesignID`, `version`, `content`, `start_time`, `end_time`, `mentor`, `next_time`) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+ if($stmt=mysqli_prepare($conn,$insertsql))
+  {
+    mysqli_stmt_bind_param($stmt,"iiisiii",$writerid, $designid, $version, $fbktext, $start_time, $timespent, $mentor, $nexttime);
     mysqli_stmt_execute($stmt);   
     mysqli_stmt_close($stmt); 
   }
-  
+}
+
+//************ if feedback present update Feedback
+else{
+$insertsql = "UPDATE `Feedback` SET content=? WHERE (WriterID=? AND DesignID=? AND version=?)";
+ if($stmt=mysqli_prepare($conn,$insertsql))
+  {
+    mysqli_stmt_bind_param($stmt,"siii",$fbktext, $writerid, $designid, $version);
+    mysqli_stmt_execute($stmt);   
+    mysqli_stmt_close($stmt); 
+  }
+}
   
  ?>
 

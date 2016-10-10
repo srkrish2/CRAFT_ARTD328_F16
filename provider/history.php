@@ -113,7 +113,7 @@
             <p >
               You will need to review a classmate's design and provide feedback on the design. We also provide the previous iteration of the design, the feedback for the previous iteration, and the designer's response to the feedback to help you write your feedback. Your feedback should include both <strong>strengths </strong> and<strong>weaknesses</strong> about the design. This task is worth 20 points, and will be graded on effort.</p>
 
-          <div id="email-div" name="email-div"><strong> Enter your university id:</strong> <input type="text" id="email" name="email"><em style="color:red;"> (required)*</em>
+          <div id="email-div" name="email-div"><strong> Enter your university email:</strong> <input type="text" id="email" name="email"><em style="color:red;"> (required)*</em>
           </div>
 
           </div>
@@ -135,7 +135,12 @@
             </div>
           </div><!--end Previous Design row--><!--end Design row-->
 
-          <!--Design -->   
+          <div style="text-align:center;margin-top:20px;">
+            <button type="submit" class="btn-submit" id="submit-bn" onclick="next();">Next</button> 
+            </div>
+
+          <!--Design -->
+          <div id = "current" name="current" style="visibility:hidden;">   
           <h3>Current Iteration</h3>      
           <div class="row">       
              <div class="img-div" onmouseover="" style="cursor: pointer;" >
@@ -146,12 +151,13 @@
               <h3><?php echo htmlspecialchars($title)?></h3>
               <p class="project-description" style='text-align: justify;'><?php echo $description;?> </p>
             </div>
+          </div>
           </div><!--end Design row--><!--end Design row-->
           <!--Empty field alert --> 
           <div class="alert alert-danger" role="alert" id="error_alert" style="display:none;">
             <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
             Please fill out the empty fields.
-          </div>
+          
 
           <!--Feedback -->
           <div class="sub_frame required" id="fbk-div">       
@@ -163,16 +169,19 @@
             <div style="text-align:center;margin-top:20px;">
             <button type="submit" class="btn-submit" id="submit-bn" onclick="save();">Submit</button> 
             </div>
+
             
             <form class="hidden" action="post_survey_history.php?mid=<?php echo $mid;?>&writerid=<?php echo $writerid;?>" method="post" id="feedback_form" name="feedback_form">
               <input name="_fbk-text"/>
               <input name="_email"/>
               <input type="hidden" id='timespent' name="timespent" value="" />
+              <input type="hidden" id='nexttime' name="nexttime" value="" />
 
             </form>
 
             <div style="margin-top:25px;"></div>
 
+          </div>
           </div>
       </div><!--end container-->
 
@@ -190,6 +199,14 @@
       var d = new Date();
        start = d.getTime();
     });
+
+    function next(){
+      var current = document.getElementById("current");
+      current.style.visibility = "visible" ;
+      var d = new Date();
+      next = d.getTime();
+      nexttime = next-start;
+    }
 
     function save(){
       
@@ -220,8 +237,9 @@
           $("#feedback_form [name=_fbk-text]").val( $("#fbk-text").val() );
           var d = new Date();
           var end = d.getTime();
-          var timespent = end - start;
+          var timespent = end - nexttime;
           document.getElementById('timespent').value = timespent;
+          document.getElementById('nexttime').value = nexttime;
           $("#feedback_form").submit();
             
         }else

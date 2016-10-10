@@ -63,7 +63,7 @@
             <p >
               You will need to review a classmate's design and provide feedback on the design. Your feedback should include both <strong>strengths </strong>and <strong>weaknesses</strong> about the design. This task is worth 20 points, and will be graded on effort.</p>
 
-          <div id="email-div" name="email-div"><strong> Enter your university id:</strong> <input type="text" id="email" name="email"><em style="color:red;"> (required)*</em>
+          <div id="email-div" name="email-div"><strong> Enter your university email:</strong> <input type="text" id="email" name="email"><em style="color:red;"> (required)*</em>
           </div>
 
           </div>
