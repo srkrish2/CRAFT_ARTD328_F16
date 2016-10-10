@@ -14,6 +14,7 @@
  $nexttime=$_POST['nexttime'];
   $start_time=0;
 
+
   //************ Find Design ID
 $designidsql = "SELECT * From Designs Where mid=?";
  if($stmt=mysqli_prepare($conn,$designidsql))
@@ -55,12 +56,12 @@ $insertsql = "SELECT FROM `Feedback` WHERE `WriterID` = ? AND `DesignID` = ? AND
     mysqli_stmt_close($stmt); 
   }
 
-
 //************ if feedback not present Save Feedback
 if(!$result){
 $insertsql = "INSERT INTO `Feedback`(`WriterID`, `DesignID`, `version`, `content`, `start_time`, `end_time`, `mentor`, `next_time`) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
  if($stmt=mysqli_prepare($conn,$insertsql))
   {
+    echo "here";
     mysqli_stmt_bind_param($stmt,"iiisiiii",$writerid, $designid, $version, $fbktext, $start_time, $timespent, $mentor, $nexttime);
     mysqli_stmt_execute($stmt);   
     mysqli_stmt_close($stmt); 
@@ -96,7 +97,7 @@ $insertsql = "UPDATE `Feedback` SET content=? WHERE (WriterID=? AND DesignID=? A
     <!-- JQuery and Google font -->
     <link href='https://fonts.googleapis.com/css?family=Exo:100,400' rel='stylesheet' type='text/css'>
 
-    <title> Final Survry</title>
+    <title> Final Survey</title>
     <?php include('../webpage-utility/ele_header.php'); ?>
    
 
