@@ -136,10 +136,7 @@
             </div>
           </div><!--end Previous Design row--><!--end Design row-->
 
-          <div style="text-align:center;margin-top:20px;">
-            <button type="submit" class="btn-submit" id="submit-bn" onclick="nnext();">Next</button> 
-            </div>
-
+            <button style="text-align:center;margin-top:20px;" type="submit" class="btn-submit" id="submit-bn" onclick="nnext();">Next</button> 
           </div>
 
           <!--Design -->
