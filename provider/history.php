@@ -119,7 +119,7 @@
           </div>
 
           <!--Previous Design -->  
-          <div id = "prev" name="prev" style="display:none;">
+          <div id = "prev" name="prev" style="display:inline;">
           <h3>Previous Iteration</h3>    
           <div class="row"> 
               <div class="col">      
