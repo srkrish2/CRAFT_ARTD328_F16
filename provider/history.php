@@ -119,7 +119,6 @@
           </div>
 
           <!--Previous Design -->  
-          <div id = "prev" name="prev">
           <h3>Previous Iteration</h3>    
           <div class="row" id='prevrow'> 
               <div class="col">      
@@ -140,7 +139,6 @@
             <button type="submit" class="btn-submit" id="submit-bn" onclick="next();">Next</button> 
             </div>
 
-          </div>
 
           <!--Design -->
           <div id = "current" name="current" style="display:none;">   
