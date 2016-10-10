@@ -47,7 +47,7 @@ $insertsql = "SELECT * FROM `u_Designer` WHERE DesignerID=?";
   }
 
   //************ Is feedback already there from this designer?
-$insertsql = "SELECT FROM `Feedback` WHERE `WriterID` = ? AND `DesignID` = ? AND version=?";
+$insertsql = "SELECT * FROM `Feedback` WHERE `WriterID` = ? AND `DesignID` = ? AND version=?";
  if($stmt=mysqli_prepare($conn,$insertsql))
   {
     echo "here";
