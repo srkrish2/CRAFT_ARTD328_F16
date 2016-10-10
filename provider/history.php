@@ -157,6 +157,9 @@
               </div>
             </div>
           <!--end Design row--><!--end Design row-->
+          <div style="text-align:center;margin-top:20px;">
+            <button type="submit" class="btn-submit" id="submit-bn" onclick="back();">Back</button> 
+            </div>
           <!--Empty field alert --> 
             <div class="alert alert-danger" role="alert" id="error_alert" style="display:none;">
               <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
@@ -184,8 +187,7 @@
               <textarea id="fbk-text" name="fbk-text" rows="7" style="width:100%;"></textarea>  
             </div>
 
-              <div style="text-align:center;margin-top:20px;">
-              <button type="submit" class="btn-submit" id="submit-bn" onclick="back();">Back</button> 
+              <div id = "buttons" style="text-align:center;margin-top:20px;display:none">
               <button type="submit" class="btn-submit" id="submit-bn" onclick="save();">Submit</button> 
               </div>
 
@@ -212,6 +214,8 @@
       current.style.display = "inline" ;
       var current = document.getElementById("fbk-div");
       current.style.display = "inline" ;
+      var current = document.getElementById("buttons");
+      current.style.display = "inline" ;
       var prev = document.getElementById("prev");
       prev.style.display = "none" ;
       var d = new Date();
@@ -221,6 +225,8 @@
 
     function back(){
       var current = document.getElementById("current");
+      current.style.display = "none" ;
+      var current = document.getElementById("buttons");
       current.style.display = "none" ;
       var prev = document.getElementById("prev");
       prev.style.display = "inline" ;
