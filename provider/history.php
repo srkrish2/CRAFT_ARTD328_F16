@@ -206,8 +206,8 @@
     function next(){
       var current = document.getElementById("current");
       current.style.display = "inline" ;
-      var prev = document.getElementById("prev");
-      current.style.display = "none" ;
+      //var prev = document.getElementById("prev");
+      //current.style.display = "none" ;
       var d = new Date();
       next = d.getTime();
       nexttime = next-start;
@@ -216,8 +216,8 @@
     function back(){
       var current = document.getElementById("current");
       current.style.display = "none" ;
-      var prev = document.getElementById("prev");
-      current.style.display = "inline" ;
+      //var prev = document.getElementById("prev");
+      //current.style.display = "inline" ;
       var d = new Date();
       next = d.getTime();
       nexttime = next-start;
