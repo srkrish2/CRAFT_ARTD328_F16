@@ -141,48 +141,48 @@
 
           <!--Design -->
           <div id = "current" name="current" style="display:none;">   
-          <h3>Current Iteration</h3>      
-          <div class="row">       
-             <div class="img-div" onmouseover="" style="cursor: pointer;" >
-             <img width="auto" height="400px" src=<?php echo $filename; ?> onClick="view(this);" >
-             <p><em style="color:grey">* Click on the image to enlarge </em></p>
+            <h3>Current Iteration</h3>      
+            <div class="row">       
+               <div class="img-div" onmouseover="" style="cursor: pointer;" >
+               <img width="auto" height="400px" src=<?php echo $filename; ?> onClick="view(this);" >
+               <p><em style="color:grey">* Click on the image to enlarge </em></p>
+              </div>
+              <div style="margin-right:30px;">
+                <h3><?php echo htmlspecialchars($title)?></h3>
+                <p class="project-description" style='text-align: justify;'><?php echo $description;?> </p>
+              </div>
             </div>
-            <div style="margin-right:30px;">
-              <h3><?php echo htmlspecialchars($title)?></h3>
-              <p class="project-description" style='text-align: justify;'><?php echo $description;?> </p>
-            </div>
-          </div>
           <!--end Design row--><!--end Design row-->
           <!--Empty field alert --> 
-          <div class="alert alert-danger" role="alert" id="error_alert" style="display:none;">
-            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-            Please fill out the empty fields.
-          
+            <div class="alert alert-danger" role="alert" id="error_alert" style="display:none;">
+              <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+              Please fill out the empty fields.
+            
 
-          <!--Feedback -->
-          <div class="sub_frame required" id="fbk-div">       
-            <h4 class="question-text"><strong>Please provide feedback (in English) for how to improve the design &nbsp</strong><em style="color:red;"> (required)</em></h4>
-                
-            <textarea id="fbk-text" name="fbk-text" rows="7" style="width:100%;"></textarea>  
-          </div>
-
-            <div style="text-align:center;margin-top:20px;">
-            <button type="submit" class="btn-submit" id="submit-bn" onclick="back();">Back</button> 
-            <button type="submit" class="btn-submit" id="submit-bn" onclick="save();">Submit</button> 
+            <!--Feedback -->
+            <div class="sub_frame required" id="fbk-div">       
+              <h4 class="question-text"><strong>Please provide feedback (in English) for how to improve the design &nbsp</strong><em style="color:red;"> (required)</em></h4>
+                  
+              <textarea id="fbk-text" name="fbk-text" rows="7" style="width:100%;"></textarea>  
             </div>
 
-            
-            <form class="hidden" action="post_survey_history.php?mid=<?php echo $mid;?>&writerid=<?php echo $writerid;?>" method="post" id="feedback_form" name="feedback_form">
-              <input name="_fbk-text"/>
-              <input name="_email"/>
-              <input type="hidden" id='timespent' name="timespent" value="" />
-              <input type="hidden" id='nexttime' name="nexttime" value="" />
+              <div style="text-align:center;margin-top:20px;">
+              <button type="submit" class="btn-submit" id="submit-bn" onclick="back();">Back</button> 
+              <button type="submit" class="btn-submit" id="submit-bn" onclick="save();">Submit</button> 
+              </div>
 
-            </form>
+              
+              <form class="hidden" action="post_survey_history.php?mid=<?php echo $mid;?>&writerid=<?php echo $writerid;?>" method="post" id="feedback_form" name="feedback_form">
+                <input name="_fbk-text"/>
+                <input name="_email"/>
+                <input type="hidden" id='timespent' name="timespent" value="" />
+                <input type="hidden" id='nexttime' name="nexttime" value="" />
 
-            <div style="margin-top:25px;"></div>
+              </form>
 
-          </div>
+              <div style="margin-top:25px;"></div>
+
+            </div>
           </div>
       </div><!--end container-->
 
