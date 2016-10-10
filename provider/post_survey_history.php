@@ -61,7 +61,7 @@ if($result){
 $insertsql = "INSERT INTO `Feedback`(`WriterID`, `DesignID`, `version`, `content`, `start_time`, `end_time`, `mentor`, `next_time`) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
  if($stmt=mysqli_prepare($conn,$insertsql))
   {
-    mysqli_stmt_bind_param($stmt,"iiisiii",$writerid, $designid, $version, $fbktext, $start_time, $timespent, $mentor, $nexttime);
+    mysqli_stmt_bind_param($stmt,"iiisiiii",$writerid, $designid, $version, $fbktext, $start_time, $timespent, $mentor, $nexttime);
     mysqli_stmt_execute($stmt);   
     mysqli_stmt_close($stmt); 
   }
