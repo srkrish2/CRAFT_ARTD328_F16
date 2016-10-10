@@ -157,6 +157,7 @@
             <div class="alert alert-danger" role="alert" id="error_alert" style="display:none;">
               <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
               Please fill out the empty fields.
+            </div>
             
 
             <!--Feedback -->
