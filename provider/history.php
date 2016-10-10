@@ -37,7 +37,7 @@
   if($stmt=mysqli_prepare($conn,$sql))
   {
     $p_stage = $stage - 1;
-    echo $stage;
+    echo $design_id;
     mysqli_stmt_bind_param($stmt,"ii",$teamID,$p_stage);
     mysqli_stmt_execute($stmt);
     $result = $stmt->get_result();
