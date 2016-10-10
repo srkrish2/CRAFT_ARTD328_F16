@@ -120,14 +120,26 @@
 
     <script>
 
-    $("#email").bind("keydown", function(){
+    var behavior;
+
+    $("#email").bind("keydown", function() {
         $('#email-div').removeClass("has-error-text");
     }
     );
 
+    document.getElementById("fbk-text").onkeypress = function() {myFunction()};
+
+    function myFunction() {
+      var d = new Date();
+      t = d.getTime();
+      time = t-start;
+        behavior.push("keypress:"+t);
+    }
+
     $(document).ready(function() {
       var d = new Date();
        start = d.getTime();
+       behavior = new Array();
     });
 
     function save(){
