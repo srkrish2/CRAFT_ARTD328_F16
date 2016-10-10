@@ -123,7 +123,7 @@
           <div class="row"> 
               <div class="col">      
                <div class="img-div" onmouseover="" style="cursor: pointer;" >
-               <img width="auto" height="400px" src=<?php echo $p_filename; ?> onClick="view(this);" >
+               <img width="auto" height="400px" src='"'<?php echo $p_filename; ?>'"' onClick="view(this);" >
                <p><em style="color:grey">* Click on the image to enlarge </em></p>
                 </div>
               </div>
