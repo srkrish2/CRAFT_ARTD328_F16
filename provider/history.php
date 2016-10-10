@@ -138,7 +138,7 @@
           </div><!--end Previous Design row--><!--end Design row-->
 
           <div id="nextbtn" style="text-align:center;margin-top:20px;display:inline">
-            <button type="submit" class="btn-submit" id="submit-bn" onclick="next();">Next</button> 
+            <button type="submit" class="btn-submit" id="submit-bn" onclick="nnext();">Next</button> 
             </div>
           </div>
 
@@ -209,7 +209,7 @@
        start = d.getTime();
     });
 
-    function next(){
+    function nnext(){
       var current = document.getElementById("current");
       current.style.display = "inline" ;
       var current = document.getElementById("fbk-div");
