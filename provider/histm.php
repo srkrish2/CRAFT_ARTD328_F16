@@ -137,7 +137,7 @@
             </div>
           </div><!--end Previous Design row--><!--end Design row-->
 
-          <div id="nextbtn" style="display:inline">
+          <div id="nextbtn" style="display:inline-block">
             <p style="text-align:center;">Press Next to see the current version of the design</p>
             <button style="text-align:center;margin-top:20px" type="submit" class="btn-submit" id="submit-bn" onclick="nnext();">Next</button> 
             </div>
@@ -226,11 +226,11 @@
 
     function nnext(){
       var current = document.getElementById("current");
-      current.style.display = "inline" ;
+      current.style.display = "inline-block" ;
       var current = document.getElementById("fbk-div");
-      current.style.display = "inline" ;
+      current.style.display = "inline-block" ;
       var current = document.getElementById("buttons");
-      current.style.display = "inline" ;
+      current.style.display = "inline-block" ;
       var current = document.getElementById("nextbtn");
       current.style.display = "none" ;
       var prev = document.getElementById("prev");
@@ -247,9 +247,9 @@
       var current = document.getElementById("buttons");
       current.style.display = "none" ;
       var current = document.getElementById("nextbtn");
-      current.style.display = "inline" ;
+      current.style.display = "inline-block" ;
       var prev = document.getElementById("prev");
-      prev.style.display = "inline" ;
+      prev.style.display = "inline-block" ;
       var d = new Date();
       backt = d.getTime();
       backtime = backt-start;
