@@ -137,9 +137,9 @@
             </div>
           </div><!--end Previous Design row--><!--end Design row-->
 
-          <div id="nextbtn" style="display:inline-block">
+          <div id="nextbtn" style="margin-top:20px;display:inline-block">
             <p style="text-align:center;">Press Next to see the current version of the design</p>
-            <button style="text-align:center;margin-top:20px" type="submit" class="btn-submit" id="submit-bn" onclick="nnext();">Next</button> 
+            <button style="text-align:center;" type="submit" class="btn-submit" id="submit-bn" onclick="nnext();">Next</button> 
             </div>
           </div>
 
