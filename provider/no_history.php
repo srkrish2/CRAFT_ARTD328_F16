@@ -107,6 +107,7 @@
               <input name="_fbk-text"/>
               <input name="_email"/>
               <input type="hidden" id='timespent' name="timespent" value="" />
+              <input type="hidden" id='behavior' name="behavior" value="" />
 
             </form>
 
@@ -173,6 +174,7 @@
           var end = d.getTime();
           var timespent = end - start;
           document.getElementById('timespent').value = timespent;
+          document.getElementById('behavior').value = behavior.toString();
           $("#feedback_form").submit();
             
         }else

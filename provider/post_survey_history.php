@@ -13,8 +13,8 @@
  $timespent=$_POST['timespent'];
  $nexttime=$_POST['nexttime'];
   $behavior=$_POST['behavior'];
-  echo $behavior;
   $start_time=0;
+
 
   //************ Find Design ID
 $designidsql = "SELECT * From Designs Where mid=?";
@@ -50,7 +50,6 @@ $insertsql = "SELECT * FROM `u_Designer` WHERE DesignerID=?";
 $insertsql = "SELECT * FROM `Feedback` WHERE `WriterID` = ? AND `DesignID` = ? AND version=?";
  if($stmt=mysqli_prepare($conn,$insertsql))
   {
-    echo "here";
     mysqli_stmt_bind_param($stmt,"iii",$writerid, $designid, $version);
     mysqli_stmt_execute($stmt);   
     $result = $stmt->get_result();
@@ -64,7 +63,6 @@ if(!count($result)){
 $insertsql = "INSERT INTO `Feedback`(`WriterID`, `DesignID`, `version`, `content`, `start_time`, `end_time`, `mentor`, `next_time`, `behavior`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
  if($stmt=mysqli_prepare($conn,$insertsql))
   {
-    echo "here1";
     mysqli_stmt_bind_param($stmt,"iiisiiiis",$writerid, $designid, $version, $fbktext, $start_time, $timespent, $mentor, $nexttime, $behavior);
     mysqli_stmt_execute($stmt);   
     mysqli_stmt_close($stmt); 
@@ -75,7 +73,6 @@ else{
 $insertsql = "UPDATE `Feedback` SET content=? WHERE (WriterID=? AND DesignID=? AND version=?)";
  if($stmt=mysqli_prepare($conn,$insertsql))
   {
-    echo "here2";
     mysqli_stmt_bind_param($stmt,"siii",$fbktext, $writerid, $designid, $version);
     mysqli_stmt_execute($stmt);   
     mysqli_stmt_close($stmt); 
