@@ -112,7 +112,7 @@
               </strong>
             </h3>
             <p >
-              You will need to review a classmate's design and provide feedback on the design. We also provide the previous iteration of the design, the feedback for the previous iteration, and the designer's response to the feedback to help you write your feedback. Your feedback should include both <strong>strengths </strong> and<strong>weaknesses</strong> about the design. This task is worth 20 points, and will be graded on effort.</p>
+              You have been randomly assigned to review a classmate's design and provide feedback. This task is worth 20 points, and will be graded on completeness (including both strengths and weaknesses of the design), relevance (the appropriateness and helpfulness), and quality (providing insights beyond the superficial). We encourage you to review the previous design, the feedback for the previous iteration, and the designer's response to the feedback when providing your own feedback.</p>
 
           <div id="email-div" name="email-div"><strong> Enter your university email:</strong> <input type="text" id="email" name="email"><em style="color:red;"> (required)*</em>
           </div>
