@@ -137,8 +137,9 @@
             </div>
           </div><!--end Previous Design row--><!--end Design row-->
 
-          <div id="nextbtn" style="text-align:center;margin-top:20px;display:inline">
-            <button type="submit" class="btn-submit" id="submit-bn" onclick="nnext();">Next</button> 
+          <div id="nextbtn" style="margin-top:20px;display:inline-block">
+            <p style="text-align:center;">Press Next to see the current version of the design</p>
+            <button style="text-align:center;" type="submit" class="btn-submit" id="submit-bn" onclick="nnext();">Next</button> 
             </div>
           </div>
 
@@ -158,6 +159,7 @@
             </div>
           <!--end Design row--><!--end Design row-->
           <div style="text-align:center;margin-top:20px;">
+            <p style="text-align:center;">Press Back to see the previous version of the design. DO NOT press the browser back button, or you will lose your work.</p>
             <button type="submit" class="btn-submit" id="submit-bn" onclick="back();">Back</button> 
             </div>
           <!--Empty field alert --> 
